@@ -288,11 +288,11 @@ export const NavBar = () => {
         navIntersect();
     }
 
-    // useEffect(() => {
-    //   if(!isSmallScreen) {
-    //     watchScroll()
-    //   }
-    // })
+    useEffect(() => {
+      if(!isSmallScreen) {
+        watchScroll()
+      }
+    })
 
   return (
     <div className={classes.navContainer} id="navbar">
@@ -316,7 +316,7 @@ export const NavBar = () => {
           !isSmallScreen ?
             <ul className={`${classes.navLinkGroup} ${isIntersecting === null ? null : isIntersecting === true ? classes.navGroupSlider : isIntersecting === false && count >= 1 ? classes.navGroupReturn : null} `} id="navLinkGroup">
               <li className={classes.navLink}><AnchorLink offset="143" href="#services" >services</AnchorLink></li>
-              <li className={classes.navLink}><AnchorLink offset="90" href="#about">about</AnchorLink></li>
+              <li className={classes.navLink}><AnchorLink offset="110" href="#about">about</AnchorLink></li>
               <li className={classes.navLink}><AnchorLink offset="100" href="#contact">contact</AnchorLink></li>
               <li id="bookSlider" className={`${classes.navLinkBookBtn} ${isIntersecting === true ? `${classes.bookBtnSlider}` : classes.bookBtnReturn}`}><AnchorLink offset="100" href="#booking">book a service</AnchorLink></li>
             </ul>

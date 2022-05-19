@@ -14,7 +14,7 @@ export const Testimonial = (props) => {
     const useStyles = createUseStyles({
         testimonialSection: {
             width: "100vw",
-            backgroundColor: "rgb(235, 235, 245)",
+            backgroundColor: "rgb(255, 255, 255)",
             display: "flex",
             flexDirection: "column",
             aliginItems: "center",
@@ -171,7 +171,7 @@ export const Testimonial = (props) => {
     const classes = useStyles();
     const [reviewData, setReviewData] = useState([]);
     const [reviewIndex, setReviewIndex] = useState(0);
-    const API_KEY = "AIzaSyDLjSUEkkruj_v5iOVOIoATSOlIHz7oMmc";
+    const API_KEY = "AIzaSyBJENPgN53qEr85XVI_SPU3U8OsePGny0M";
 
     useEffect(() => {
         fetchReviews();

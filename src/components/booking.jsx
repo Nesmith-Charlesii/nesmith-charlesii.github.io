@@ -6,27 +6,36 @@ export const Booking = () => {
         bookingSection: {
             height: "120vh",
             backgroundColor: "rgb(255, 99, 0)",
-            scrollMarginTop: "180px"
+            // scrollMarginTop: "120px"
         },
         bookingContainer: {
             height: "100%",
+            width: "100vw",
             display: "flex",
-            justifyContent: "center",
+            flexDirection: "column",
             alignItems: "center"
         },
         bookingHeader: {
-            paddingTop: "70px",
+            paddingTop: "80px",
             width: "100%",
             fontFamily: "'Chivo', sans-serif",
-            fontSize: "40px",
+            fontSize: "54px",
             color: "rgb(255, 255, 255)",
             textAlign: "center",
+            marginBottom: "70px",
             '& p': {
                 textTransform: "uppercase",
                 marginTop: 0,
                 marginBottom: "-12px"
             }
         },
+        bookingForm: {
+            display: "flex",
+            justifyContent: "center",
+            height: "60%",
+            width: "70%"
+        },
+        
     })
     
     const classes = useStyles();
@@ -38,34 +47,13 @@ export const Booking = () => {
     return (
         <section className={classes.bookingSection} id="booking">
             <div className={classes.bookingContainer}>
-                {/* <div className={classes.bookingHeader}>
-                    <p>our</p>
-                    <p>services</p>
-                </div> */}
-                {/* <div className={classes.bookingFormContainer}>
-                    <form className={classes.bookingForm}>
-                    <div className={classes.formRow1}>
-                        <input type="text" id="first-name" placeholder='first name' />
-                        <input type="text" id="first-name" placeholder='last name' />
-                    </div>
-                    <div className={classes.formRow2}>
-                        <input type="text" id="first-name" placeholder='phone number' />
-                        <input type="text" id="first-name" placeholder='email address' />
-                    </div>
-                    <div className={classes.formRow3}>
-                        <input type="text" id="first-name" placeholder='make' />
-                        <input type="text" id="first-name" placeholder='model' />
-                        <input type="text" id="first-name" placeholder='year' />
-                    </div>
-                    <div className={classes.formRow4}>
-                        
-                    </div>
-                    <div className={classes.formRow5}>
-                        
-                    </div>
-                    </form>
-                </div> */}
-                <iframe src="https://allproautocenter.setmore.com/" scrolling="yes" width="60%" height="60%" frameborder="3" ></iframe>
+                <div className={classes.bookingHeader}>
+                    <p>Book Your</p>
+                    <p>Service Today</p>
+                </div>
+                <div className={classes.bookingForm}>
+                    <iframe id="booking-form" src="https://allproautocenter.setmore.com/" scrolling="yes" width="100%" height="100%" frameBorder="3" ></iframe>
+                </div>
             </div>
         </section>
     )
