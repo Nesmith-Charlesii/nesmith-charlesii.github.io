@@ -209,7 +209,7 @@ export const Testimonial = (props) => {
         if(reviewIndex === (reviewData.length - 1)) {
             setReviewIndex(0)
         } else {
-        setReviewIndex(reviewIndex + 1)
+            setReviewIndex(reviewIndex + 1)
         }
     }
 
