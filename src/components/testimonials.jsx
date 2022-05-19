@@ -188,6 +188,7 @@ export const Testimonial = (props) => {
         }
         catch(error) {  
             console.log(error);
+            
         }
     }
 
