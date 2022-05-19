@@ -25,7 +25,7 @@ export const Testimonial = (props) => {
         testimonialsHeader: {
             paddingTop: "70px",
             fontFamily: "'Chivo', sans-serif",
-            fontSize: "40px",
+            fontSize: "54px",
             textAlign: "center",
             textTransform: "uppercase",
             '& p': {
@@ -39,7 +39,7 @@ export const Testimonial = (props) => {
             justifyContent: "center",
             alignItems: "center",
             textAlign: "center",
-            margin: "110px 70px 110px 70px",
+            margin: "90px 70px 110px 70px",
             [theme.breakpoints.down('1080')]: {
                 marginTop: "80px",
                 padding: "0px 0px 0px 0px",
@@ -110,10 +110,12 @@ export const Testimonial = (props) => {
             borderRadius: "50%"
         },
         author_name: {
-            fontSize: "16px",
+            fontSize: "18px",
             fontFamily: "arial, helvetica, sans-serif",
             height: "50px",
-            fontWeight: 700,
+            fontWeight: 600,
+            fontStyle: "italic",
+            marginBottom: "10px",
             [theme.breakpoints.down('1080')]: {
                 textAlign: "right",
                 fontSize: "17px",
@@ -138,6 +140,7 @@ export const Testimonial = (props) => {
         review_text: {
             fontSize: "14px",
             fontFamily: "arial, helvetica, sans-serif",
+            fontStyle: "italic",
             height: "158px",
             maxWidth: "320px",
             padding: "0px 20px 0px 20px",
@@ -179,7 +182,7 @@ export const Testimonial = (props) => {
 
     const fetchReviews = async() => {
         try {
-            let {data} = await axios.get(`https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJm_YwkCaPrIkRyPiQzjalLPY&fields=reviews&key=${API_KEY}`);
+            let {data} = await axios.get(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJm_YwkCaPrIkRyPiQzjalLPY&fields=reviews&key=${API_KEY}`);
             console.log("review dataset", data.result.reviews)
             setReviewData(data.result.reviews);
         }
@@ -222,11 +225,11 @@ export const Testimonial = (props) => {
                     !isSmallScreen &&
                     reviewData.map((review, index) =>  
                         <div className={classes.review} key={uuid4()}>
-                            <div className={`${classes.author_image_border} ${classes.author_image_border_animation}`}>
+                            {/* <div className={`${classes.author_image_border} ${classes.author_image_border_animation}`}>
                                 <div className={classes.author_image}>
                                     <img className={classes.profile_image} src={review.profile_photo_url} alt="reviewer_image"></img>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className={classes.author_name}>
                                 <p>{review.author_name}</p>
                             </div>
