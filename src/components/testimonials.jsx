@@ -225,11 +225,6 @@ export const Testimonial = (props) => {
                     !isSmallScreen &&
                     reviewData.map((review, index) =>  
                         <div className={classes.review} key={uuid4()}>
-                            {/* <div className={`${classes.author_image_border} ${classes.author_image_border_animation}`}>
-                                <div className={classes.author_image}>
-                                    <img className={classes.profile_image} src={review.profile_photo_url} alt="reviewer_image"></img>
-                                </div>
-                            </div> */}
                             <div className={classes.author_name}>
                                 <p>{review.author_name}</p>
                             </div>
