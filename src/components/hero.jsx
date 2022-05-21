@@ -10,7 +10,7 @@ export const Hero = () => {
         heroContainer: {
             height: "90vh",
             position: "relative",
-            paddingTop: "100px",
+            // paddingTop: "100px",
             width: "100%",
             display: "flex",
             justifyContent: "center",

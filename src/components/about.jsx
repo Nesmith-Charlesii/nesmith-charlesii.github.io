@@ -52,8 +52,8 @@ export const About = () => {
         aboutContent: {
             marginTop: "10px",
             maxWidth: "34vw",
-            fontFamily: "sans-serif",
-            fontWeight: "lighter",
+            fontFamily: "arial, sans-serif",
+            fontWeight: 500,
             fontSize: "2.3vh",
             [theme.breakpoints.down(1020)]: {
                 maxWidth: "80vw",

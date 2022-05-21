@@ -9,7 +9,7 @@ export const Coupons = () => {
     const useStyles = createUseStyles({
         couponContainer: {
             position: "absolute",
-            bottom: "-60px",
+            bottom: "20px",
             display: "flex",
             justifyContent: "center",
             // height: "100px",
@@ -21,7 +21,7 @@ export const Coupons = () => {
                 transform: "scale(.7)"
             },
             [theme.breakpoints.down(860)]: {
-                bottom: "-145px",
+                bottom: "0px",
                 flexDirection: "column",
                 alignItems: "center",
                 marginLeft: "-14px"
