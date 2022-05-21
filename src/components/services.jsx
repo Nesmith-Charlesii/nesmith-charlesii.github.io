@@ -8,7 +8,7 @@ import  { ReactComponent as CheckEngine } from '../assets/img/checkEngine.svg';
 import  { ReactComponent as Electrical } from '../assets/img/electrical.svg';
 import  { ReactComponent as Maintenance } from '../assets/img/maintenance.svg';
 import  { ReactComponent as NcInspection } from '../assets/img/ncInspection.svg';
-import  { ReactComponent as OilChange } from '../assets/img/oilChange.svg';
+import  { ReactComponent as OilChange } from '../assets/img/Oil_jug.svg';
 import  { ReactComponent as DownArrow } from '../assets/img/Downarrow.svg';
 import { useMediaQuery, useTheme } from '@mui/material'
 
@@ -216,7 +216,7 @@ export const Services = () => {
     const [serviceDisplaySet, setServiceDisplaySet] = useState(0);
 
     const switchServiceSet = () => {
-        if(serviceDisplaySet === 2) {
+        if(serviceDisplaySet === 1) {
             setServiceDisplaySet(0)
         } else {
             setServiceDisplaySet(serviceDisplaySet + 1);
@@ -388,7 +388,7 @@ export const Services = () => {
                         </>
 
                     }
-                    {
+                    {/* {
 
                         serviceDisplaySet === 2 &&
 
@@ -400,7 +400,7 @@ export const Services = () => {
                             </div>
                         </div>
 
-                    }
+                    } */}
                     </div>
                     <div className={classes.downArrow}>
                         <p>view more</p>

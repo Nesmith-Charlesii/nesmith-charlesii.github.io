@@ -1,7 +1,9 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
+import { useMediaQuery, useTheme } from '@mui/material'
 
 export const Booking = () => {
+    const theme = useTheme();
     const useStyles = createUseStyles({
         bookingSection: {
             height: "120vh",
@@ -27,6 +29,12 @@ export const Booking = () => {
                 textTransform: "uppercase",
                 marginTop: 0,
                 marginBottom: "-12px"
+            },
+            [theme.breakpoints.down(700)]: {
+                fontSize: "46px"
+            },
+            [theme.breakpoints.down(480)]: {
+                fontSize: "38px"
             }
         },
         bookingForm: {

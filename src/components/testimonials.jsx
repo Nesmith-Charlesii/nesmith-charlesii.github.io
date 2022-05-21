@@ -31,6 +31,12 @@ export const Testimonial = (props) => {
             '& p': {
                 marginTop: 0,
                 marginBottom: "-12px",
+            },
+            [theme.breakpoints.down(700)]: {
+                fontSize: "46px"
+            },
+            [theme.breakpoints.down(480)]: {
+                fontSize: "38px"
             }
         },
         review_group: {
@@ -44,7 +50,7 @@ export const Testimonial = (props) => {
                 marginTop: "80px",
                 padding: "0px 0px 0px 0px",
                 '& #carousel-left': {
-                    transform: "scale(4.2)",
+                    transform: "scale(2.2)",
                     // marginLeft: "120px",
                     position: "absolute",
                     top: "75px",
@@ -55,15 +61,27 @@ export const Testimonial = (props) => {
                     paddingRight: "2px",
                     transition: "background-color 500ms",
                     '& path': {
-                        stroke: "rgb(255, 255, 255)"
+                        stroke: "rgb(255, 255, 255)",
+                        [theme.breakpoints.down(750)]: {
+                            stroke: "rgb(0, 0, 0)"
+                        },
                     },
                     '&:hover': {
                         cursor: "pointer",
                         backgroundColor: "rgb(80, 80, 80)",
-                    }
+                    },
+                    [theme.breakpoints.down(800)]: {
+                        left: "30px",
+                    },
+                    [theme.breakpoints.down(750)]: {
+                        backgroundColor: "white",
+                    },
+                    [theme.breakpoints.down(700)]: {
+                        display: "none"
+                    },
                 },
                 '& #carousel-right': {
-                    transform: "scale(4.2)",
+                    transform: "scale(2.2)",
                     // marginRight: "120px",
                     position: "absolute",
                     top: "75px",
@@ -74,12 +92,24 @@ export const Testimonial = (props) => {
                     paddingLeft: "2px",
                     transition: "background-color 500ms",
                     '& path': {
-                        stroke: "rgb(255, 255, 255)"
+                        stroke: "rgb(255, 255, 255)",
+                        [theme.breakpoints.down(750)]: {
+                            stroke: "rgb(0, 0, 0)"
+                        },
                     },
                     '&:hover': {
                         cursor: "pointer",
                         backgroundColor: "rgb(80, 80, 80)",
-                    }
+                    },
+                    [theme.breakpoints.down(800)]: {
+                        right: "55px",
+                    },
+                    [theme.breakpoints.down(750)]: {
+                        backgroundColor: "white",
+                    },
+                    [theme.breakpoints.down(700)]: {
+                        display: "none"
+                    },
                 }
             }
         },
@@ -117,12 +147,12 @@ export const Testimonial = (props) => {
             fontStyle: "italic",
             marginBottom: "10px",
             [theme.breakpoints.down('1080')]: {
-                textAlign: "right",
-                fontSize: "17px",
-                fontWeight: 500,
+                textAlign: "center",
+                fontSize: "18px",
+                fontWeight: 600,
                 fontStyle: "italic",
                 marginTop: "-10px",
-                maxWidth: "320px"
+                // maxWidth: "320px"
             }
         },
         star_rating: {
@@ -135,6 +165,9 @@ export const Testimonial = (props) => {
                 '& path': {
                     stroke: "rgb(130,130,130)",
                 }
+            },
+            [theme.breakpoints.down('1080')]: {
+                transform: "scale(1.2)"
             }
         },
         review_text: {
@@ -149,7 +182,7 @@ export const Testimonial = (props) => {
             boxOrient: "vertical",
             overflowY: "clip",
             [theme.breakpoints.down("1080")]: {
-                textAlign: "left",
+                textAlign: "center",
                 height: "auto",
                 fontStyle: "italic",
                 fontSize: "16px",
@@ -168,6 +201,27 @@ export const Testimonial = (props) => {
         },
         carouselBtnGroup: {
             display: "flex"
+        },
+        carouselIndicators: {
+            visibility: "hidden",
+            position: "relative",
+            // transform: "translate(125%, 0px)",
+            justifyContent: "center",
+            marginTop: "25px",
+            display: "flex",
+            gap: "10px",
+            [theme.breakpoints.down(700)]: {
+                visibility: "visible",
+            }
+        },
+        carouselIndicatorDot: {
+            height: "15px",
+            width: "15px",
+            border: "1.5px solid rgb(255, 99, 0)",
+            borderRadius: "50%"
+        },
+        indicatorFill: {
+            backgroundColor: "rgb(255, 99, 0)"
         }
     })
     
@@ -214,6 +268,10 @@ export const Testimonial = (props) => {
         }
     }
 
+    const selectReview = (index) => {
+        setReviewIndex(index);
+    }
+
     return(
         <div id="testimonials" className={classes.testimonialSection}>
             <div className={classes.testimonialsHeader}>
@@ -241,18 +299,30 @@ export const Testimonial = (props) => {
                 {
                     isSmallScreen &&
                     <>
-                
+                    
                         <RightChevron  onClick={() => nextReview()} />
                         <div className={classes.mobile_review}>
                             <div className={classes.review_section}>
+                                <div className={classes.author_name}>
+                                    <p>{reviewData[reviewIndex]?.author_name ? reviewData[reviewIndex]?.author_name : <CircularProgress/>}</p>
+                                </div>
                                 <div className={classes.star_rating}>
                                     <p>{reviewData[reviewIndex]?.rating ? reviewStars(reviewData[reviewIndex]?.rating) : <CircularProgress/>}</p>
                                 </div>
                                 <div className={classes.review_text}>
                                     <p>{reviewData[reviewIndex]?.text ? reviewData[reviewIndex]?.text : <CircularProgress/>}</p>
                                 </div>
-                                <div className={classes.author_name}>
-                                    <p>-  {reviewData[reviewIndex]?.author_name ? reviewData[reviewIndex]?.author_name : <CircularProgress/>}</p>
+                                <div className={classes.carouselIndicators}>
+                                    {
+                                        Array.from(new Array(5)).map((indicator, index) =>
+
+                                                reviewIndex === index ?
+
+                                                <div className={`${classes.carouselIndicatorDot} ${classes.indicatorFill}`}></div>
+                                                :
+                                                <div className={`${classes.carouselIndicatorDot} `} onClick={() => (selectReview(index))}></div>
+                                        )
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -261,6 +331,7 @@ export const Testimonial = (props) => {
                     </>
                 }
             </div>
+            
         </div>
     )
 }
