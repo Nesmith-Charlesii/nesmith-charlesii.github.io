@@ -1,18 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.25f2b198.chunk.css",
-    "main.js": "/static/js/main.c0c7a58c.chunk.js",
-    "main.js.map": "/static/js/main.c0c7a58c.chunk.js.map",
+    "main.js": "/static/js/main.ff7b8ca6.chunk.js",
+    "main.js.map": "/static/js/main.ff7b8ca6.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.244f85d6.js",
     "runtime-main.js.map": "/static/js/runtime-main.244f85d6.js.map",
-    "static/js/2.b1c1bad5.chunk.js": "/static/js/2.b1c1bad5.chunk.js",
-    "static/js/2.b1c1bad5.chunk.js.map": "/static/js/2.b1c1bad5.chunk.js.map",
+    "static/js/2.59b9c70a.chunk.js": "/static/js/2.59b9c70a.chunk.js",
+    "static/js/2.59b9c70a.chunk.js.map": "/static/js/2.59b9c70a.chunk.js.map",
     "static/js/3.ede0e3c6.chunk.js": "/static/js/3.ede0e3c6.chunk.js",
     "static/js/3.ede0e3c6.chunk.js.map": "/static/js/3.ede0e3c6.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.25f2b198.chunk.css.map": "/static/css/main.25f2b198.chunk.css.map",
-    "static/js/2.b1c1bad5.chunk.js.LICENSE.txt": "/static/js/2.b1c1bad5.chunk.js.LICENSE.txt",
+    "static/js/2.59b9c70a.chunk.js.LICENSE.txt": "/static/js/2.59b9c70a.chunk.js.LICENSE.txt",
     "static/media/Downarrow.59ee83e2.svg": "/static/media/Downarrow.59ee83e2.svg",
+    "static/media/Oil_jug.e47b26c0.svg": "/static/media/Oil_jug.e47b26c0.svg",
     "static/media/acRepair.5116adf3.svg": "/static/media/acRepair.5116adf3.svg",
     "static/media/alignment.e54e6bb8.svg": "/static/media/alignment.e54e6bb8.svg",
     "static/media/autoRepair.ef3c081e.svg": "/static/media/autoRepair.ef3c081e.svg",
@@ -21,18 +22,17 @@
     "static/media/carousel_right_arrow.dde897df.svg": "/static/media/carousel_right_arrow.dde897df.svg",
     "static/media/checkEngine.c6fd7bed.svg": "/static/media/checkEngine.c6fd7bed.svg",
     "static/media/coupon1.8dbb8e3c.svg": "/static/media/coupon1.8dbb8e3c.svg",
-    "static/media/coupon2.fa737986.svg": "/static/media/coupon2.fa737986.svg",
+    "static/media/coupon2.9e1c59a4.svg": "/static/media/coupon2.9e1c59a4.svg",
     "static/media/electrical.35461bd4.svg": "/static/media/electrical.35461bd4.svg",
     "static/media/heroImage.2a9d3288.jpeg": "/static/media/heroImage.2a9d3288.jpeg",
     "static/media/maintenance.cbc89291.svg": "/static/media/maintenance.cbc89291.svg",
     "static/media/ncInspection.7b6cc369.svg": "/static/media/ncInspection.7b6cc369.svg",
-    "static/media/oilChange.78e6f27c.svg": "/static/media/oilChange.78e6f27c.svg",
     "static/media/star.d1067c53.svg": "/static/media/star.d1067c53.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.244f85d6.js",
-    "static/js/2.b1c1bad5.chunk.js",
+    "static/js/2.59b9c70a.chunk.js",
     "static/css/main.25f2b198.chunk.css",
-    "static/js/main.c0c7a58c.chunk.js"
+    "static/js/main.ff7b8ca6.chunk.js"
   ]
 }
