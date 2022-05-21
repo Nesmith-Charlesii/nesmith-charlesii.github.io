@@ -24,7 +24,7 @@ export const Main = () => {
             fontSize: "12px"
         },
         coupons: {
-            position: "absolute"
+            position: "relative"
         },
     })
 
