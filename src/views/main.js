@@ -40,7 +40,7 @@ export const Main = () => {
             <Contact />
             <Booking />
             <Testimonial /> 
-            <Location />
+            {/* <Location /> */}
             <footer className={classes.footer}>
                 <p>&copy; 2021 All Pro Auto. All Rights Reserved</p>
             </footer>

@@ -15,15 +15,10 @@ export const Testimonial = (props) => {
         testimonialSection: {
             position: "relative",
             width: "100vw",
+            height: "580px",
             backgroundColor: "rgb(255, 255, 255)",
             display: "flex",
             flexDirection: "column",
-            [theme.breakpoints.down("1080")]: {
-                height: "62vh"
-            },
-            [theme.breakpoints.down(700)]: {
-                height: "70vh"
-            },
         },
         testimonialsHeader: {
             paddingTop: "70px",
@@ -114,6 +109,12 @@ export const Testimonial = (props) => {
                     },
                 }
             },
+            [theme.breakpoints.down(700)]: {
+                margin: "75px 70px -100px 70px"
+            },
+            [theme.breakpoints.down(420)]: {
+                margin: "55px 70px -100px 70px"
+            }
         },
         review: {
             display: "flex",
@@ -206,7 +207,7 @@ export const Testimonial = (props) => {
             width: "100vw",
             visibility: "hidden",
             position: "absolute",
-            bottom: "114px",
+            top: "500px",
             justifyContent: "center",
             display: "flex",
             gap: "10px",
@@ -214,7 +215,7 @@ export const Testimonial = (props) => {
                 visibility: "visible",
             },
             [theme.breakpoints.down(410)]: {
-                bottom: "75px"
+                top: "510px"
             }
         },
         carouselIndicatorDot: {
@@ -350,18 +351,20 @@ export const Testimonial = (props) => {
                     </>
                 }
             </div>
-            <div className={classes.carouselIndicators}>
-                {
-                    Array.from(new Array(5)).map((indicator, index) =>
 
-                            reviewIndex === index ?
+                <div className={classes.carouselIndicators}>
+                    {
+                        Array.from(new Array(5)).map((indicator, index) =>
 
-                            <div className={`${classes.carouselIndicatorDot} ${classes.indicatorFill}`} key={uuid4()}></div>
-                            :
-                            <div className={`${classes.carouselIndicatorDot} `} onClick={() => (selectReview(index))} key={uuid4()}></div>
-                    )
-                }
-            </div>
+                                reviewIndex === index ?
+
+                                <div className={`${classes.carouselIndicatorDot} ${classes.indicatorFill}`} key={uuid4()}></div>
+                                :
+                                <div className={`${classes.carouselIndicatorDot} `} onClick={() => (selectReview(index))} key={uuid4()}></div>
+                        )
+                    }
+                </div>
+
         </div>
     )
 }
