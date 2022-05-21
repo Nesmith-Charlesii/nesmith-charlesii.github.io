@@ -173,7 +173,7 @@ export const NavBar = () => {
       marginLeft: "61px",
       height: "100px",
       [theme.breakpoints.down(600)]: {
-        marginLeft: "38px"
+        marginLeft: "36px"
       },
     },
     allProLogo: {
@@ -227,7 +227,7 @@ export const NavBar = () => {
         transform: "scale(1.3)",
       },
       [theme.breakpoints.down(600)]: {
-        marginRight: "38px"
+        marginRight: "36px"
       },
     },
     mobileMenu: {
