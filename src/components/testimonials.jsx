@@ -360,7 +360,7 @@ export const Testimonial = (props) => {
 
                                 <div className={`${classes.carouselIndicatorDot} ${classes.indicatorFill}`} key={uuid4()}></div>
                                 :
-                                <div className={`${classes.carouselIndicatorDot} `} onClick={() => (selectReview(index))} key={uuid4()}></div>
+                                <div className={`${classes.carouselIndicatorDot} `} onClick={() => (selectReview(index))} onTouchMove={(e) => e.touches[0].clientX > 0 ? selectReview(index + 1) : selectReview(index - 1) } key={uuid4()}></div>
                         )
                     }
                 </div>
