@@ -83,10 +83,10 @@ export const Services = () => {
                 margin: 0
             },
             [theme.breakpoints.down(820)]: {
-                fontSize: "1.8vh"
+                fontSize: "18px"
             },
             [theme.breakpoints.down(480)]: {
-                fontSize: "1.6vh"
+                fontSize: "16px"
             }
         },
         servicesList: {
@@ -208,6 +208,10 @@ export const Services = () => {
                 height: "110px",
                 width: "110px"
             },
+            [theme.breakpoints.down('480')]: {
+                height: "125px",
+                width: "125px"
+            }
         }
     })
 

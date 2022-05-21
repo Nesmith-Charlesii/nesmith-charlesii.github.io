@@ -1,6 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { useMediaQuery, useTheme } from '@mui/material'
+import { useTheme } from '@mui/material'
 
 export const Contact = () => {
     const theme = useTheme();

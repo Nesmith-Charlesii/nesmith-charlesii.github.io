@@ -1,6 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { useMediaQuery, useTheme } from '@mui/material'
+import { useTheme } from '@mui/material'
 
 export const Booking = () => {
     const theme = useTheme();
@@ -48,10 +48,6 @@ export const Booking = () => {
     
     const classes = useStyles();
 
-    const searchFormTimes = (input) => {
-
-    }
-
     return (
         <section className={classes.bookingSection} id="booking">
             <div className={classes.bookingContainer}>
@@ -60,7 +56,7 @@ export const Booking = () => {
                     <p>Service Today</p>
                 </div>
                 <div className={classes.bookingForm}>
-                    <iframe id="booking-form" src="https://allproautocenter.setmore.com/" scrolling="yes" width="100%" height="100%" frameBorder="3" ></iframe>
+                    <iframe id="booking-form" src="https://allproautocenter.setmore.com/" scrolling="yes" width="100%" height="100%" frameBorder="3" title='setmore booking'></iframe>
                 </div>
             </div>
         </section>

@@ -34,7 +34,7 @@ export const Main = () => {
         <div className={classes.mainContainer}>
             <NavBar />
             <Hero />
-            <Coupons />
+            {/* <Coupons /> */}
             <Services />
             <About />
             <Contact />

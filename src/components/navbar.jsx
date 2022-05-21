@@ -172,8 +172,8 @@ export const NavBar = () => {
       alignItems: "center",
       marginLeft: "61px",
       height: "100px",
-      [theme.breakpoints.down(440)]: {
-        marginLeft: "51px"
+      [theme.breakpoints.down(600)]: {
+        marginLeft: "38px"
       },
     },
     allProLogo: {
@@ -226,8 +226,8 @@ export const NavBar = () => {
         color: "white",
         transform: "scale(1.3)",
       },
-      [theme.breakpoints.down(440)]: {
-        marginRight: "51px"
+      [theme.breakpoints.down(600)]: {
+        marginRight: "38px"
       },
     },
     mobileMenu: {

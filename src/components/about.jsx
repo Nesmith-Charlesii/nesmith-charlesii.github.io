@@ -1,7 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { useTheme } from '@mui/material';
-import { textAlign } from '@mui/system';
 
 export const About = () => {
     const theme = useTheme();
@@ -52,8 +51,7 @@ export const About = () => {
         aboutContent: {
             marginTop: "10px",
             maxWidth: "34vw",
-            fontFamily: "arial, sans-serif",
-            fontWeight: 500,
+            fontFamily: 'Raleway, sans-serif',
             fontSize: "2.3vh",
             [theme.breakpoints.down(1020)]: {
                 maxWidth: "80vw",

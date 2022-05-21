@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, { useState } from 'react';
 import { createUseStyles } from 'react-jss';
 import { ReactComponent as Star } from '../assets/img/star.svg';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -6,21 +6,24 @@ import { useMediaQuery, useTheme } from '@mui/material'
 import { ReactComponent as LeftChevron } from '../assets/img/carousel_left_arrow.svg'
 import { ReactComponent as RightChevron } from '../assets/img/carousel_right_arrow.svg'
 import { v4 as uuid4 } from 'uuid'
-import axios from 'axios';
+// import axios from 'axios';
 
 export const Testimonial = (props) => {
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down("1080"));
     const useStyles = createUseStyles({
         testimonialSection: {
+            position: "relative",
             width: "100vw",
             backgroundColor: "rgb(255, 255, 255)",
             display: "flex",
             flexDirection: "column",
-            aliginItems: "center",
             [theme.breakpoints.down("1080")]: {
-                height: "auto"
-            }
+                height: "62vh"
+            },
+            [theme.breakpoints.down(700)]: {
+                height: "70vh"
+            },
         },
         testimonialsHeader: {
             paddingTop: "70px",
@@ -47,11 +50,10 @@ export const Testimonial = (props) => {
             textAlign: "center",
             margin: "90px 70px 110px 70px",
             [theme.breakpoints.down('1080')]: {
-                marginTop: "80px",
+                marginTop: "75px",
                 padding: "0px 0px 0px 0px",
                 '& #carousel-left': {
                     transform: "scale(2.2)",
-                    // marginLeft: "120px",
                     position: "absolute",
                     top: "75px",
                     left: "55px",
@@ -111,7 +113,7 @@ export const Testimonial = (props) => {
                         display: "none"
                     },
                 }
-            }
+            },
         },
         review: {
             display: "flex",
@@ -152,7 +154,6 @@ export const Testimonial = (props) => {
                 fontWeight: 600,
                 fontStyle: "italic",
                 marginTop: "-10px",
-                // maxWidth: "320px"
             }
         },
         star_rating: {
@@ -184,7 +185,7 @@ export const Testimonial = (props) => {
             [theme.breakpoints.down("1080")]: {
                 textAlign: "center",
                 height: "auto",
-                fontStyle: "italic",
+                fontStyle: "normal",
                 fontSize: "16px",
             }
         },
@@ -193,7 +194,6 @@ export const Testimonial = (props) => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            // marginLeft: "142px"
         },
         author_profile_section: {
             marginRight: "100px",
@@ -203,15 +203,18 @@ export const Testimonial = (props) => {
             display: "flex"
         },
         carouselIndicators: {
+            width: "100vw",
             visibility: "hidden",
-            position: "relative",
-            // transform: "translate(125%, 0px)",
+            position: "absolute",
+            bottom: "114px",
             justifyContent: "center",
-            marginTop: "25px",
             display: "flex",
             gap: "10px",
             [theme.breakpoints.down(700)]: {
                 visibility: "visible",
+            },
+            [theme.breakpoints.down(410)]: {
+                bottom: "75px"
             }
         },
         carouselIndicatorDot: {
@@ -226,42 +229,70 @@ export const Testimonial = (props) => {
     })
     
     const classes = useStyles();
-    const [reviewData, setReviewData] = useState([]);
+    // const [reviewData, setReviewData] = useState([]);
     const [reviewIndex, setReviewIndex] = useState(0);
-    const API_KEY = "AIzaSyBJENPgN53qEr85XVI_SPU3U8OsePGny0M";
+    // const API_KEY = "AIzaSyBJENPgN53qEr85XVI_SPU3U8OsePGny0M";
 
-    useEffect(() => {
-        fetchReviews();
-    }, [])
+    const savedReviewData = [
+        {
+            author_name: "Moris Campos",
+            star_rating: 5,
+            text: "Frank is an excellent mechanic! Staff is very polite and helpful."
+        },
+        {
+            author_name: "vicki and Creppy",
+            star_rating: 5,
+            text: "This place is fantastic they do a great job their decently priced and their fast so call them what are you waiting for"
+        },
+        {
+            author_name: "Jan Lomaz",
+            star_rating: 5,
+            text: "this is the best car-shop what I ever see...the profesional service..nice helpful and profesional people there..my car was fixed in couple minutes ...you cant go wrong with this car-shop ...high recomended"
+        },
+        {
+            author_name: "James Allen",
+            star_rating: 5,
+            text: "Curtious, efficient, and very friendly. Very professional."
+        },
+        {
+            author_name: "Cecilia Lopez",
+            star_rating: 5,
+            text: "I love this shop, I've been here four times and I was in and out... the rates are excellent. Se habla español which is a plus."
+        },
+    ]
 
-    const fetchReviews = async() => {
-        try {
-            let {data} = await axios.get(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJm_YwkCaPrIkRyPiQzjalLPY&fields=reviews&key=${API_KEY}`);
-            console.log("review dataset", data.result.reviews)
-            setReviewData(data.result.reviews);
-        }
-        catch(error) {  
-            console.log(error);
+    // useEffect(() => {
+    //     fetchReviews();
+    // }, [])
+
+    // const fetchReviews = async() => {
+    //     try {
+    //         let {data} = await axios.get(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJm_YwkCaPrIkRyPiQzjalLPY&fields=reviews&key=${API_KEY}`);
+    //         console.log("review dataset", data.result.reviews)
+    //         setReviewData(data.result.reviews);
+    //     }
+    //     catch(error) {  
+    //         console.log(error);
             
-        }
-    }
+    //     }
+    // }
 
     const reviewStars = (number) => {
         return Array.from(new Array(number)).map(() => (
-            <Star id="star"/>
+            <Star id="star" key={uuid4()}/>
         ))
     }
 
     const previousReview = () => {
         if(reviewIndex === 0) {
-            setReviewIndex(reviewData.length - 1)
+            setReviewIndex(savedReviewData.length - 1)
         } else {
         setReviewIndex(reviewIndex - 1);
         }
     }
 
     const nextReview = () => {
-        if(reviewIndex === (reviewData.length - 1)) {
+        if(reviewIndex === (savedReviewData.length - 1)) {
             setReviewIndex(0)
         } else {
             setReviewIndex(reviewIndex + 1)
@@ -282,13 +313,13 @@ export const Testimonial = (props) => {
 
                 {
                     !isSmallScreen &&
-                    reviewData.map((review, index) =>  
+                    savedReviewData.map((review, index) =>  
                         <div className={classes.review} key={uuid4()}>
                             <div className={classes.author_name}>
                                 <p>{review.author_name}</p>
                             </div>
                             <div className={classes.star_rating}>
-                                <p>{reviewStars(review.rating)}</p>
+                                <p>{reviewStars(review.star_rating)}</p>
                             </div>
                             <div className={classes.review_text}>
                                 <p>{review.text}</p>
@@ -304,25 +335,13 @@ export const Testimonial = (props) => {
                         <div className={classes.mobile_review}>
                             <div className={classes.review_section}>
                                 <div className={classes.author_name}>
-                                    <p>{reviewData[reviewIndex]?.author_name ? reviewData[reviewIndex]?.author_name : <CircularProgress/>}</p>
+                                    <p>{savedReviewData[reviewIndex]?.author_name ? savedReviewData[reviewIndex]?.author_name : <CircularProgress/>}</p>
                                 </div>
                                 <div className={classes.star_rating}>
-                                    <p>{reviewData[reviewIndex]?.rating ? reviewStars(reviewData[reviewIndex]?.rating) : <CircularProgress/>}</p>
+                                    <p>{savedReviewData[reviewIndex]?.star_rating ? reviewStars(savedReviewData[reviewIndex]?.star_rating) : <CircularProgress/>}</p>
                                 </div>
                                 <div className={classes.review_text}>
-                                    <p>{reviewData[reviewIndex]?.text ? reviewData[reviewIndex]?.text : <CircularProgress/>}</p>
-                                </div>
-                                <div className={classes.carouselIndicators}>
-                                    {
-                                        Array.from(new Array(5)).map((indicator, index) =>
-
-                                                reviewIndex === index ?
-
-                                                <div className={`${classes.carouselIndicatorDot} ${classes.indicatorFill}`}></div>
-                                                :
-                                                <div className={`${classes.carouselIndicatorDot} `} onClick={() => (selectReview(index))}></div>
-                                        )
-                                    }
+                                    <p>{savedReviewData[reviewIndex]?.text ? savedReviewData[reviewIndex]?.text : <CircularProgress/>}</p>
                                 </div>
                             </div>
                         </div>
@@ -331,7 +350,18 @@ export const Testimonial = (props) => {
                     </>
                 }
             </div>
-            
+            <div className={classes.carouselIndicators}>
+                {
+                    Array.from(new Array(5)).map((indicator, index) =>
+
+                            reviewIndex === index ?
+
+                            <div className={`${classes.carouselIndicatorDot} ${classes.indicatorFill}`} key={uuid4()}></div>
+                            :
+                            <div className={`${classes.carouselIndicatorDot} `} onClick={() => (selectReview(index))} key={uuid4()}></div>
+                    )
+                }
+            </div>
         </div>
     )
 }
