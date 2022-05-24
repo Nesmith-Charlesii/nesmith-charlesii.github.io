@@ -8,9 +8,9 @@ export const Hero = () => {
     const theme = useTheme();
     const useStyles = createUseStyles({
         heroContainer: {
-            height: "100vh",
+            height: "90vh",
             position: "relative",
-            // paddingTop: "100px",
+            paddingTop: "100px",
             width: "100%",
             display: "flex",
             justifyContent: "center",

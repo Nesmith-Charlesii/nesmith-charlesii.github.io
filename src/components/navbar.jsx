@@ -11,7 +11,7 @@ export const NavBar = () => {
   const useStyles = makeStyles({
     navContainer: {
       position: "fixed",
-      zIndex: 1,
+      zIndex: 2,
       backgroundColor: "rgb(21,21,21);",
       height: "100px",
       width: "100vw",

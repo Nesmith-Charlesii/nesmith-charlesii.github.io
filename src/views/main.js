@@ -33,14 +33,14 @@ export const Main = () => {
     return (
         <div className={classes.mainContainer}>
             <NavBar />
-            <Hero />
+            <Hero/>
             {/* <Coupons /> */}
             <Services />
             <About />
             <Contact />
             <Booking />
             <Testimonial /> 
-            {/* <Location /> */}
+            <Location />
             <footer className={classes.footer}>
                 <p>&copy; 2021 All Pro Auto. All Rights Reserved</p>
             </footer>

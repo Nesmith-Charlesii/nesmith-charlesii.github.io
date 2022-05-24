@@ -1,6 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import {ReactComponent as CouponOne} from '../assets/img/coupon1.svg'
+import {ReactComponent as CouponOne} from '../assets/img/oil_coupon_update.svg'
 import {ReactComponent as CouponTwo} from '../assets/img/coupon2.svg'
 import { useTheme } from '@mui/material';
 
@@ -8,23 +8,22 @@ export const Coupons = () => {
     const theme = useTheme();
     const useStyles = createUseStyles({
         couponContainer: {
-            position: "absolute",
-            bottom: "20px",
             display: "flex",
             justifyContent: "center",
-            // height: "100px",
             width: "100vw",
+            marginTop: "-90px",
+            zIndex: 1,
             [theme.breakpoints.down(1210)]: {
                 transform: "scale(.8)"
             },
             [theme.breakpoints.down(1000)]: {
-                transform: "scale(.7)"
+                transform: "scale(.75)"
             },
             [theme.breakpoints.down(860)]: {
-                bottom: "0px",
                 flexDirection: "column",
                 alignItems: "center",
-                marginLeft: "-14px"
+                marginLeft: "-14px",
+                marginTop: "-120px"
             },
             [theme.breakpoints.down(480)]: {
                 transform: "scale(.6)"

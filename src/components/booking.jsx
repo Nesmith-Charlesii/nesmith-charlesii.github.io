@@ -1,6 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { useTheme } from '@mui/material'
+import { useTheme, useMediaQuery } from '@mui/material'
 
 export const Booking = () => {
     const theme = useTheme();
@@ -40,13 +40,17 @@ export const Booking = () => {
         bookingForm: {
             display: "flex",
             justifyContent: "center",
-            height: "60%",
-            width: "70%"
+            height: "65%",
+            width: "75vw"
         },
-        
+        bookingCta: {
+            height: "100%"
+        }
+
     })
     
     const classes = useStyles();
+    const mobileView = useMediaQuery(theme.breakpoints.down(600));
 
     return (
         <section className={classes.bookingSection} id="booking">

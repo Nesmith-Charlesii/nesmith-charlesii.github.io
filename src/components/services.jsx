@@ -11,6 +11,7 @@ import  { ReactComponent as NcInspection } from '../assets/img/ncInspection.svg'
 import  { ReactComponent as OilChange } from '../assets/img/Oil_jug.svg';
 import  { ReactComponent as DownArrow } from '../assets/img/Downarrow.svg';
 import { useMediaQuery, useTheme } from '@mui/material'
+import { Coupons } from './coupons';
 
 export const Services = () => {
     const theme = useTheme();
@@ -45,15 +46,17 @@ export const Services = () => {
                 }
             },
             [theme.breakpoints.down(550)]: {
+                marginTop: "10px",
                 fontSize: "17px",
                 paddingBottom: "60px"
             },
             [theme.breakpoints.down(480)]: {
+                marginTop: "30px",
                 fontSize: "14px"
             },
         },
         servicesHeader: {
-            marginTop: "150px",
+            marginTop: "100px",
             width: "100%",
             fontFamily: "'Chivo', sans-serif",
             fontSize: "54px",
@@ -64,10 +67,14 @@ export const Services = () => {
                 marginTop: 0,
                 marginBottom: "-12px"
             },
+            [theme.breakpoints.down(860)]: {
+                marginTop: "40px"
+            },
             [theme.breakpoints.down(700)]: {
                 fontSize: "46px"
             },
             [theme.breakpoints.down(480)]: {
+                marginTop: "0px",
                 fontSize: "38px"
             }
         },
@@ -232,6 +239,7 @@ export const Services = () => {
             { 
                 !isSmallScreen && 
                 <div className={classes.servicesContainer}>
+                    <Coupons />
                     <div className={classes.servicesHeader} id="services">
                         <p>our</p>
                         <p>services</p>
@@ -309,6 +317,7 @@ export const Services = () => {
             {
                 isSmallScreen &&
                 <div className={classes.servicesContainer}>
+                    <Coupons />
                     <div className={classes.servicesHeader} id="services">
                         <p>our</p>
                         <p>services</p>

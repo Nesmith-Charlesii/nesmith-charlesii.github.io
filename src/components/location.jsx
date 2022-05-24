@@ -4,7 +4,7 @@ import { createUseStyles } from 'react-jss';
 export const Location = () => {
     const useStyles = createUseStyles({
         locationSection: {
-            height: "79vh",
+            height: "70vh",
         },
         locationContainer: {
             height: "100%"
