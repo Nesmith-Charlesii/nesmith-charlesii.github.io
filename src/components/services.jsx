@@ -252,7 +252,7 @@ export const Services = () => {
                             <AutoRepair className={classes.serviceIcon}/>
                             <div className={classes.serviceContext}>
                                 <p className={classes.serviceTitle}>auto repairs</p>
-                                <p className={classes.serviceDescription}>Your one stop shop for foreign and domestic auto repair in Fuquay.</p>
+                                <p className={classes.serviceDescription}>Your one stop shop for auto repairs in Fuquay.</p>
                             </div>
                         </div>
                         <div className={classes.serviceInfo}>
@@ -273,14 +273,14 @@ export const Services = () => {
                             <OilChange className={classes.serviceIcon}/>
                             <div className={classes.serviceContext}>
                                 <p className={classes.serviceTitle}>oil change</p>
-                                <p className={classes.serviceDescription}>For gasoline-powered passenger vehicles and light trucks, we recommend an oil change every 3,000 miles</p>
+                                <p className={classes.serviceDescription}>We recommend an oil change 3,000 for regular oil or 6,000 miles for synthetic oil.</p>
                             </div>
                         </div>
                         <div className={classes.serviceInfo}>
                             <AcRepair className={classes.serviceIcon}/>
                             <div className={classes.serviceContext}>
                                 <p className={classes.serviceTitle}>a/c repairs</p>
-                                <p className={classes.serviceDescription}>When NC gets hot or cold, your commute can get uncomfortable quickly unless the A/C & heating is in mint condition.</p>
+                                <p className={classes.serviceDescription}>Your commute can get uncomfortable quickly, unless the A/C & Heating is working at peak efficiency.</p>
                             </div>
                         </div>
                         <div className={classes.serviceInfo}>
@@ -294,21 +294,22 @@ export const Services = () => {
                             <CheckEngine className={classes.serviceIcon}/>
                             <div className={classes.serviceContext}>
                                 <p className={classes.serviceTitle}>check engine light</p>
-                                <p className={classes.serviceDescription}>We take 'check engine light' notices seriously. It's always a good idea to stop by and have your engine serviced.</p>
+                                <p className={classes.serviceDescription}>We take ‘check engine light’ notices seriously. Stop by and have your engine checked out by one of our mechanics.</p>
                             </div>
                         </div>
                         <div className={classes.serviceInfo}>
                             <Electrical className={classes.serviceIcon}/>
                             <div className={classes.serviceContext}>
                                 <p className={classes.serviceTitle}>electrical</p>
-                                <p className={classes.serviceDescription}>No matter what kind of electrical issues you're having, the mechanics at All Pro can run diagnostics to help fix those issues.</p>
+                                <p className={classes.serviceDescription}>No matter what kind of electrical issues you’re having, our mechanics can find and fix for them.</p>
                             </div>
                         </div>
                         <div className={classes.serviceInfo}>
                             <Alignment className={classes.serviceIcon}/>
                             <div className={classes.serviceContext}>
                                 <p className={classes.serviceTitle}>wheel alignment</p>
-                                <p className={classes.serviceDescription}>Principles for transformative solidarity practice, developed by Solidarity Is | Building Movement.</p>
+                                <p className={classes.serviceDescription}>Adjusting your vehicle’s suspension ensures that your tires are at the correct angles, making proper contact with the road.
+</p>
                             </div>
                         </div>
                     </div>
@@ -337,7 +338,7 @@ export const Services = () => {
                             <AutoRepair className={classes.serviceIcon}/>
                             <div className={classes.serviceContext}>
                                 <p className={classes.serviceTitle}>auto repairs</p>
-                                <p className={classes.serviceDescription}>Your one stop shop for foreign and domestic auto repair in Fuquay.</p>
+                                <p className={classes.serviceDescription}>Your one stop shop for auto repairs in Fuquay..</p>
                             </div>
                         </div>
                         <div className={classes.serviceInfo}>
@@ -348,17 +349,17 @@ export const Services = () => {
                             </div> 
                         </div>
                         <div className={classes.serviceInfo}>
-                            <NcInspection className={classes.serviceIcon}/>
+                            <Alignment className={classes.serviceIcon}/>
                             <div className={classes.serviceContext}>
-                                <p className={classes.serviceTitle}>nc inspection</p>
-                                <p className={classes.serviceDescription}>Schedule a NC State Inspection for your car/truck.</p>
+                                <p className={classes.serviceTitle}>wheel alignment</p>
+                                <p className={classes.serviceDescription}>Principles for transformative solidarity practice, developed by Solidarity Is | Building Movement.</p>
                             </div>
                         </div>
                         <div className={classes.serviceInfo}>
                             <OilChange className={classes.serviceIcon}/>
                             <div className={classes.serviceContext}>
                                 <p className={classes.serviceTitle}>oil change</p>
-                                <p className={classes.serviceDescription}>For gasoline-powered passenger vehicles and light trucks, we recommend an oil change every 3,000 miles</p>
+                                <p className={classes.serviceDescription}>We recommend an oil change 3,000 for regular oil or 6,000 miles for synthetic oil.</p>
                             </div>
                         </div>
                         </>
@@ -374,7 +375,7 @@ export const Services = () => {
                             <AcRepair className={classes.serviceIcon}/>
                             <div className={classes.serviceContext}>
                                 <p className={classes.serviceTitle}>a/c repairs</p>
-                                <p className={classes.serviceDescription}>When NC gets hot or cold, your commute can get uncomfortable quickly unless the A/C & heating is in mint condition.</p>
+                                <p className={classes.serviceDescription}>Your commute can get uncomfortable quickly, unless the A/C & Heating is working at peak efficiency.</p>
                             </div>
                         </div>
                         <div className={classes.serviceInfo}>
@@ -388,32 +389,19 @@ export const Services = () => {
                             <CheckEngine className={classes.serviceIcon}/>
                             <div className={classes.serviceContext}>
                                 <p className={classes.serviceTitle}>check engine light</p>
-                                <p className={classes.serviceDescription}>We take 'check engine light' notices seriously. It's always a good idea to stop by and have your engine serviced.</p>
+                                <p className={classes.serviceDescription}>Without a running battery in your vehicle, all you have is an expensive driveway ornament!</p>
                             </div>
                         </div>
                         <div className={classes.serviceInfo}>
                             <Electrical className={classes.serviceIcon}/>
                             <div className={classes.serviceContext}>
                                 <p className={classes.serviceTitle}>electrical</p>
-                                <p className={classes.serviceDescription}>No matter what kind of electrical issues you're having, the mechanics at All Pro can run diagnostics to help fix those issues.</p>
+                                <p className={classes.serviceDescription}>No matter what kind of electrical issues you’re having, our mechanics can find and fix for them.</p>
                             </div>
                         </div>
                         </>
 
                     }
-                    {/* {
-
-                        serviceDisplaySet === 2 &&
-
-                        <div className={classes.serviceInfo}>
-                            <Alignment className={classes.serviceIcon}/>
-                            <div className={classes.serviceContext}>
-                                <p className={classes.serviceTitle}>wheel alignment</p>
-                                <p className={classes.serviceDescription}>Principles for transformative solidarity practice, developed by Solidarity Is | Building Movement.</p>
-                            </div>
-                        </div>
-
-                    } */}
                     </div>
                     <div className={classes.downArrow}>
                         <p>view more</p>

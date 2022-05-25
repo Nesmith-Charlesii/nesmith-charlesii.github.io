@@ -95,7 +95,7 @@ export const About = () => {
                         <p>all pro auto</p>
                     </div>
                     <div className={classes.aboutContent}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum arcu in justo mollis accumsan. Quisque enim metus, venenatis efficitur rutrum sit amet, accumsan egestas mi. Maecenas ultricies mauris eget dictum semper. Sed feugiat, magna id auctor sollicitudin, augue ex condimentum nibh, a maximus turpis nibh eleifend nunc. Etiam faucibus, nisi a cursus rhoncus.
+                    We are a one stop shop, full-service preventive maintenance and auto repairs center in Fuquay Varina. Our doors first opened in 2008 and we have been helping customers keep their cars on the road ever since. We pride ourselves on our quality work with over 45 years of combined auto repair experience, working on both domestic and foreign vehicles. Stop in or book a service online to let us know how we can help. We look forward to working with you.
                     </div>
                 </div>
                 {/* <div className={classes.orangeBox}>
