@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.9807815f.chunk.css",
-    "main.js": "/static/js/main.76ad10d8.chunk.js",
-    "main.js.map": "/static/js/main.76ad10d8.chunk.js.map",
+    "main.js": "/static/js/main.056c9c4a.chunk.js",
+    "main.js.map": "/static/js/main.056c9c4a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0ea909b9.js",
     "runtime-main.js.map": "/static/js/runtime-main.0ea909b9.js.map",
     "static/js/2.0b5eb1c8.chunk.js": "/static/js/2.0b5eb1c8.chunk.js",
@@ -16,6 +16,7 @@
     "static/media/Oil_jug.e47b26c0.svg": "/static/media/Oil_jug.e47b26c0.svg",
     "static/media/acRepair.5116adf3.svg": "/static/media/acRepair.5116adf3.svg",
     "static/media/alignment.e54e6bb8.svg": "/static/media/alignment.e54e6bb8.svg",
+    "static/media/all_pro_image.627dcc4c.jpg": "/static/media/all_pro_image.627dcc4c.jpg",
     "static/media/autoRepair.ef3c081e.svg": "/static/media/autoRepair.ef3c081e.svg",
     "static/media/batteryService.82f5465b.svg": "/static/media/batteryService.82f5465b.svg",
     "static/media/carousel_left_arrow.da4c7302.svg": "/static/media/carousel_left_arrow.da4c7302.svg",
@@ -33,6 +34,6 @@
     "static/js/runtime-main.0ea909b9.js",
     "static/js/2.0b5eb1c8.chunk.js",
     "static/css/main.9807815f.chunk.css",
-    "static/js/main.76ad10d8.chunk.js"
+    "static/js/main.056c9c4a.chunk.js"
   ]
 }
