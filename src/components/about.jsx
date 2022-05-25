@@ -77,7 +77,7 @@ export const About = () => {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             [theme.breakpoints.down(1020)]: {
-                marginTop: "30px",
+                marginTop: "45px",
                 width: "100vw",
                 // height: "281px"
             },
