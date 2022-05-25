@@ -219,8 +219,8 @@ export const Testimonial = (props) => {
             }
         },
         carouselIndicatorDot: {
-            height: "15px",
-            width: "15px",
+            height: "10px",
+            width: "10px",
             border: "1.5px solid rgb(255, 99, 0)",
             borderRadius: "50%"
         },

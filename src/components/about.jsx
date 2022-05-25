@@ -1,6 +1,7 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { useTheme } from '@mui/material';
+import AllProImage from '../assets/img/all_pro_image.jpg'
 
 export const About = () => {
     const theme = useTheme();
@@ -17,6 +18,7 @@ export const About = () => {
             alignItems: "center",
             padding: "0px 40px 0px 40px",
             [theme.breakpoints.down(1020)]: {
+                marginTop: "-40px",
                 flexDirection: "column"
             }
         },
@@ -30,7 +32,7 @@ export const About = () => {
             }
         },
         aboutHeader: {
-            fontSize: "54px",
+            fontSize: "52px",
             fontFamily: "'Chivo', sans-serif",
             textTransform: "uppercase",
             '& p': {
@@ -52,7 +54,7 @@ export const About = () => {
             marginTop: "10px",
             maxWidth: "34vw",
             fontFamily: 'Raleway, sans-serif',
-            fontSize: "2.3vh",
+            fontSize: "2.2vh",
             [theme.breakpoints.down(1020)]: {
                 maxWidth: "80vw",
             }
@@ -66,22 +68,18 @@ export const About = () => {
             backgroundColor: "rgb(40,40,40)"
         },
         box: {
-            position: "relative",
             height: "46vh",
-            width: "46vw",
-            backgroundColor: "rgb(40,40,40)",
+            width: "49vw",
+            // backgroundColor: "rgb(40,40,40)",
+            backgroundImage: `url(${AllProImage})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
             [theme.breakpoints.down(1020)]: {
                 width: "100vw",
-                height: "48vh"
-            }
+                // height: "281px"
+            },
         },
-        orangeBox: {
-            position: "absolute",
-            height: "34vh",
-            width: "30vw",
-            right: "310px",
-            backgroundColor: "rgb(255, 99, 0)",
-        }
     })
 
     const classes = useStyles()
@@ -98,11 +96,8 @@ export const About = () => {
                     We are a one stop shop, full-service preventive maintenance and auto repairs center in Fuquay Varina. Our doors first opened in 2008 and we have been helping customers keep their cars on the road ever since. We pride ourselves on our quality work with over 45 years of combined auto repair experience, working on both domestic and foreign vehicles. Stop in or book a service online to let us know how we can help. We look forward to working with you.
                     </div>
                 </div>
-                {/* <div className={classes.orangeBox}>
-                    
-                </div> */}
                 <div className={classes.box}>
-
+                    {/* <img src={AllProImage} alt="all pro auto building" className={classes.allProImage} /> */}
                 </div>
             </div>
         </div>
