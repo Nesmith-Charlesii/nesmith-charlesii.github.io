@@ -66,6 +66,7 @@ export const About = () => {
             height: "68vh",
             width: "57vw",
             backgroundColor: "rgb(40,40,40)"
+            
         },
         box: {
             height: "46vh",
