@@ -26,7 +26,7 @@ export const About = () => {
             position: "relative",
             marginRight: "80px",
             [theme.breakpoints.down(1020)]: {
-                marginBottom: "50px",
+                marginBottom: "22px",
                 textAlign: "center",
                 marginRight: "0px"
             }
@@ -56,7 +56,7 @@ export const About = () => {
             fontFamily: 'Raleway, sans-serif',
             fontSize: "2.2vh",
             [theme.breakpoints.down(1020)]: {
-                maxWidth: "80vw",
+                maxWidth: "82vw",
             }
         },
         image: {
