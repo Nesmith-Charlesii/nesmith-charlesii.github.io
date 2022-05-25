@@ -26,7 +26,7 @@ export const About = () => {
             position: "relative",
             marginRight: "80px",
             [theme.breakpoints.down(1020)]: {
-                marginBottom: "22px",
+                marginBottom: "-18px",
                 textAlign: "center",
                 marginRight: "0px"
             }
@@ -54,9 +54,9 @@ export const About = () => {
             marginTop: "10px",
             maxWidth: "34vw",
             fontFamily: 'Raleway, sans-serif',
-            fontSize: "2.2vh",
+            fontSize: "2.1vh",
             [theme.breakpoints.down(1020)]: {
-                maxWidth: "82vw",
+                maxWidth: "77vw",
             }
         },
         image: {
@@ -66,7 +66,7 @@ export const About = () => {
             height: "68vh",
             width: "57vw",
             backgroundColor: "rgb(40,40,40)"
-            
+
         },
         box: {
             height: "46vh",
@@ -77,6 +77,7 @@ export const About = () => {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             [theme.breakpoints.down(1020)]: {
+                marginTop: "30px",
                 width: "100vw",
                 // height: "281px"
             },
