@@ -6,7 +6,6 @@ import { useMediaQuery, useTheme } from '@mui/material'
 import { ReactComponent as LeftChevron } from '../assets/img/carousel_left_arrow.svg'
 import { ReactComponent as RightChevron } from '../assets/img/carousel_right_arrow.svg'
 import { v4 as uuid4 } from 'uuid'
-// import axios from 'axios';
 
 export const Testimonial = (props) => {
     const theme = useTheme();
@@ -232,9 +231,7 @@ export const Testimonial = (props) => {
     })
     
     const classes = useStyles();
-    // const [reviewData, setReviewData] = useState([]);
     const [reviewIndex, setReviewIndex] = useState(0);
-    // const API_KEY = "AIzaSyBJENPgN53qEr85XVI_SPU3U8OsePGny0M";
 
     const savedReviewData = [
         {
@@ -263,22 +260,6 @@ export const Testimonial = (props) => {
             text: "I love this shop, I've been here four times and I was in and out... the rates are excellent. Se habla español which is a plus."
         },
     ]
-
-    // useEffect(() => {
-    //     fetchReviews();
-    // }, [])
-
-    // const fetchReviews = async() => {
-    //     try {
-    //         let {data} = await axios.get(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJm_YwkCaPrIkRyPiQzjalLPY&fields=reviews&key=${API_KEY}`);
-    //         console.log("review dataset", data.result.reviews)
-    //         setReviewData(data.result.reviews);
-    //     }
-    //     catch(error) {  
-    //         console.log(error);
-            
-    //     }
-    // }
 
     const reviewStars = (number) => {
         return Array.from(new Array(number)).map(() => (

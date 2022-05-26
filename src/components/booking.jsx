@@ -1,6 +1,8 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { useTheme, useMediaQuery } from '@mui/material'
+import BookingCta from '../assets/img/cta_bk_2.svg'
+import {ReactComponent as CtaArrow} from '../assets/img/cta_arrow.svg'
 
 export const Booking = () => {
     const theme = useTheme();
@@ -8,16 +10,23 @@ export const Booking = () => {
         bookingSection: {
             height: "120vh",
             backgroundColor: "rgb(255, 99, 0)",
-            // scrollMarginTop: "120px"
+            [theme.breakpoints.down(800)]: {
+                backgroundImage: `url(${BookingCta})`,
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "initial",
+                backgroundSize: "auto 100vw",
+                height: "auto"
+            }
         },
         bookingContainer: {
             height: "100%",
             width: "100vw",
             display: "flex",
             flexDirection: "column",
-            alignItems: "center"
+            alignItems: "center",
         },
         bookingHeader: {
+            position: "relative",
             paddingTop: "80px",
             width: "100%",
             fontFamily: "'Chivo', sans-serif",
@@ -30,6 +39,10 @@ export const Booking = () => {
                 marginTop: 0,
                 marginBottom: "-12px"
             },
+            [theme.breakpoints.down(800)]: {
+                paddingTop: "50px",
+                marginBottom: "70px"
+            },
             [theme.breakpoints.down(700)]: {
                 fontSize: "46px"
             },
@@ -41,16 +54,39 @@ export const Booking = () => {
             display: "flex",
             justifyContent: "center",
             height: "65%",
-            width: "75vw"
+            width: "75vw",
+            [theme.breakpoints.down(800)]: {
+                display: "none"
+            }
         },
-        bookingCta: {
-            height: "100%"
+        bookingCtaMobile: {
+            height: "auto",
+            width: "210px",
+            backgroundColor: "rgb(21, 21, 21)",
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "50px",
+            boxSizing: "border-box",
+            padding: "3px 10px",
+            '& p': {
+                fontFamily: "arial, helvetica",
+                fontSize: "1.9vh",
+                fontWeight: 600,
+                marginRight: "20px"
+            },
+            '& a': {
+                textDecoration: "none",
+                color: "#FFFFFF"
+            }
+        },
+        mobileCtaContext: {
+            display: "flex",
+            alignItems: "center"
         }
-
     })
     
     const classes = useStyles();
-    const mobileView = useMediaQuery(theme.breakpoints.down(600));
+    const mobileView = useMediaQuery(theme.breakpoints.down(800));
 
     return (
         <section className={classes.bookingSection} id="booking">
@@ -59,9 +95,24 @@ export const Booking = () => {
                     <p>Book Your</p>
                     <p>Service Today</p>
                 </div>
-                <div className={classes.bookingForm}>
-                    <iframe id="booking-form" src="https://allproautocenter.setmore.com/" scrolling="yes" width="100%" height="100%" frameBorder="3" title='setmore booking'></iframe>
-                </div>
+                {
+                    !mobileView ?
+
+                    <div className={classes.bookingForm}>
+                        <iframe id="booking-form" src="https://allproautocenter.setmore.com/" scrolling="yes" width="100%" height="100%" frameBorder="3" title='setmore booking'></iframe>
+                    </div>
+
+                    :
+
+                    <div className={classes.bookingCtaMobile}>
+                        <a href='https://allproautocenter.setmore.com/'>
+                            <div className={classes.mobileCtaContext}>
+                                <p>GET STARTED</p>
+                                <CtaArrow />
+                            </div>
+                        </a>
+                    </div>
+                }
             </div>
         </section>
     )
