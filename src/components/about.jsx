@@ -57,7 +57,6 @@ export const About = () => {
             fontSize: "2.1vh",
             [theme.breakpoints.down(1020)]: {
                 marginTop: "-4px",
-                fontSize: "15.2px",
                 maxWidth: "79vw",
             }
         },
@@ -79,9 +78,9 @@ export const About = () => {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             [theme.breakpoints.down(1020)]: {
-                marginTop: "38px",
+                marginTop: "45px",
                 width: "100vw",
-                // height: "281px"
+                height: "100%"
             },
         },
     })
