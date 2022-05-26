@@ -97,6 +97,7 @@ export const Services = () => {
             }
         },
         servicesList: {
+            position: "relative",
             marginTop: "70px",
             marginBottom: "90px",
             width: "90vw",
@@ -184,9 +185,6 @@ export const Services = () => {
                 justifyContent: "space-between",
                 transform: "scale(.9)"
             },
-            // [theme.breakpoints.down("800")]: {
-            //     justifyContent: "space-between"
-            // }
         },
         serviceDescription: {
             marginTop: "0px",
@@ -219,6 +217,34 @@ export const Services = () => {
                 height: "125px",
                 width: "125px"
             }
+        },
+        serviceSectionAnimation: {
+            animationName: "$serviceSectionAnimation",
+            animationDuration: "1s",
+            animationFillMode: "forwards",
+            animationIterationCount: 1
+        },
+        "@keyframes serviceSectionAnimation": {
+            "0%": {
+                opacity: 0
+            },
+            "100%": {
+                opacity: 1
+            }
+        },
+        serviceListTransition: {
+            animationName: "$listTransition",
+            animationDuration: "600ms",
+            animationFillMode: "forwards",
+            animationIterationCount: 1
+        },
+        "@keyframes listTransition": {
+            "0%": {
+                opacity: 0
+            },
+            "100%": {
+                opacity: 1,
+            }
         }
     })
 
@@ -234,11 +260,21 @@ export const Services = () => {
         }
     }
 
+    const servicesTransition = () => {
+        let servicesList = document.getElementById("services-list");
+        if(!servicesList.classList.contains(classes.serviceListTransition)) {
+            servicesList.classList.add(classes.serviceListTransition)
+            setTimeout(() => {
+                servicesList.classList.remove(classes.serviceListTransition)
+            }, "350")
+        } 
+    }
+
     return (
         <section className={classes.servicesSection}>
             { 
                 !isSmallScreen && 
-                <div className={classes.servicesContainer}>
+                <div className={`${classes.servicesContainer}  ${classes.serviceSectionAnimation}`}>
                     <Coupons />
                     <div className={classes.servicesHeader} id="services">
                         <p>our</p>
@@ -247,7 +283,7 @@ export const Services = () => {
                     <div className={classes.servicesSubHeader}>
                         <p>Please call for all other services.</p>
                     </div>
-                    <div className= {`${classes.servicesList}`}>
+                    <div className= {`${classes.servicesList}`} id= "services-list">
                         <div className={classes.serviceInfo}>
                             <AutoRepair className={classes.serviceIcon}/>
                             <div className={classes.serviceContext}>
@@ -317,7 +353,7 @@ export const Services = () => {
             }
             {
                 isSmallScreen &&
-                <div className={classes.servicesContainer}>
+                <div className={`${classes.servicesContainer}  ${classes.serviceSectionAnimation}`}>
                     <Coupons />
                     <div className={classes.servicesHeader} id="services">
                         <p>our</p>
@@ -327,7 +363,7 @@ export const Services = () => {
                         <p>Please call for all other services.</p>
                     </div>
                     
-                    <div className= {`${classes.servicesList}`}>
+                    <div className= {`${classes.servicesList} `} id= "services-list">
 
                     { 
 
@@ -405,7 +441,7 @@ export const Services = () => {
                     </div>
                     <div className={classes.downArrow}>
                         <p>view more</p>
-                        <DownArrow onClick={() => switchServiceSet()} />
+                        <DownArrow onClick={() => (switchServiceSet(),servicesTransition())}/>
                     </div>
                 </div>
                 

@@ -338,8 +338,8 @@ export const NavBar = () => {
                     </IconButton>
                 </div>
                 <ul className={classes.mobileMenu}>
-                    <li className={classes.mobileMenuLinks}><AnchorLink onClick={() => setDrawerIsOpen(false) } offset="90" href="#about">about</AnchorLink></li>
                     <li className={classes.mobileMenuLinks}><AnchorLink onClick={() => setDrawerIsOpen(false) } offset="145" href="#services" >services</AnchorLink></li>
+                    <li className={classes.mobileMenuLinks}><AnchorLink onClick={() => setDrawerIsOpen(false) } offset="90" href="#about">about</AnchorLink></li>
                     <li className={classes.mobileMenuLinks}><AnchorLink onClick={() =>  setDrawerIsOpen(false) } offset="100" href="#contact">contact</AnchorLink></li>
                     <li className={classes.mobileMenuLinks}><AnchorLink onClick={() => setDrawerIsOpen(false) } offset="100" href="#booking">book a service</AnchorLink></li>
                 </ul>

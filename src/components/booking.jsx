@@ -61,7 +61,7 @@ export const Booking = () => {
         },
         bookingCtaMobile: {
             height: "auto",
-            width: "210px",
+            width: "180px",
             backgroundColor: "rgb(21, 21, 21)",
             display: "flex",
             justifyContent: "center",
@@ -105,7 +105,7 @@ export const Booking = () => {
                     :
 
                     <div className={classes.bookingCtaMobile}>
-                        <a href='https://allproautocenter.setmore.com/'>
+                        <a href='https://allproautocenter.setmore.com/' target="_blank">
                             <div className={classes.mobileCtaContext}>
                                 <p>GET STARTED</p>
                                 <CtaArrow />

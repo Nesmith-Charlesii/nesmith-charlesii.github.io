@@ -2,7 +2,7 @@ import React from 'react';
 import { createUseStyles } from 'react-jss';
 import HeroImage from '../assets/img/heroImage2.jpeg';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { useTheme } from '@mui/material'
+import { useTheme, useMediaQuery } from '@mui/material'
 
 export const Hero = () => {
     const theme = useTheme();
@@ -31,6 +31,7 @@ export const Hero = () => {
             position: "absolute",
         },
         heroText: {
+            position: "relative",
             textAlign: "center",
             fontFamily: "helvetica, sans-serif",
             fontWeight: "bold",
@@ -87,22 +88,52 @@ export const Hero = () => {
                 textDecoration: "none",
                 color: "#FFFFFF"
             }
-        }
+        },
+        bookBtnMobile: {
+            fontFamily: "arial, helvetica",
+            fontSize: "1.9vh",
+            fontWeight: 600,
+        },
+        heroTextAnimation: {
+            animationName: "$heroTextAnimation",
+            animationDuration: "1.5s",
+            animationFillMode: "forwards",
+            animationIterationCount: 1
+        },
+        "@keyframes heroTextAnimation": {
+            "0%": {
+                opacity: 0,
+                bottom: -20
+            },
+            "100%": {
+                opacity: 1,
+                bottom: 0
+            }
+        },
     })
 
     const classes = useStyles();
+    const mobileView = useMediaQuery(theme.breakpoints.down("800"));
 
     return (
         <div id="home" className={classes.heroContainer}>
             <div className={classes.heroBackground}>
                 
             </div>
-            <div className={classes.heroContent}>
-                <div className={classes.heroText}>
+            <div className={`${classes.heroContent} `}>
+                <div className={`${classes.heroText} ${classes.heroTextAnimation}`}>
                     <h1>our mission:</h1> 
                     <h1>to keep your car</h1>
                     <h1>on the road</h1>
-                    <AnchorLink offset="100" href="#booking"><button className={classes.bookBtn} id="bookBtn">book a service</button></AnchorLink>
+                    {
+                        !mobileView ?
+
+                        <AnchorLink offset="100" href="#booking"><button className={classes.bookBtn} id="bookBtn">book a service</button></AnchorLink>
+
+                        : 
+
+                        <a href='https://allproautocenter.setmore.com/' target="_blank" ><button className={`${classes.bookBtnMobile} ${classes.bookBtn}`} id="bookBtn">book a service</button></a>
+                    }
                 </div>
             </div>
         </div>
