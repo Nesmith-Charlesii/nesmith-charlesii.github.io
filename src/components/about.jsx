@@ -56,7 +56,8 @@ export const About = () => {
             fontFamily: 'Raleway, sans-serif',
             fontSize: "2.1vh",
             [theme.breakpoints.down(1020)]: {
-                maxWidth: "77vw",
+                fontSize: "2.17vh",
+                maxWidth: "79vw",
             }
         },
         image: {
