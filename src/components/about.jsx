@@ -18,7 +18,7 @@ export const About = () => {
             alignItems: "center",
             padding: "0px 40px 0px 40px",
             [theme.breakpoints.down(1020)]: {
-                marginTop: "-40px",
+                marginTop: "-48px",
                 flexDirection: "column"
             }
         },
@@ -56,7 +56,8 @@ export const About = () => {
             fontFamily: 'Raleway, sans-serif',
             fontSize: "2.1vh",
             [theme.breakpoints.down(1020)]: {
-                fontSize: "2.17vh",
+                marginTop: "-4px",
+                fontSize: "15.2px",
                 maxWidth: "79vw",
             }
         },
@@ -78,7 +79,7 @@ export const About = () => {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             [theme.breakpoints.down(1020)]: {
-                marginTop: "45px",
+                marginTop: "38px",
                 width: "100vw",
                 // height: "281px"
             },
