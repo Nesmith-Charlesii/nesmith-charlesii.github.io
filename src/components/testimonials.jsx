@@ -153,7 +153,7 @@ export const Testimonial = (props) => {
                 textAlign: "center",
                 fontSize: "18px",
                 fontWeight: 600,
-                fontStyle: "italic",
+                fontStyle: "normal",
                 marginTop: "-10px",
             }
         },
@@ -188,6 +188,8 @@ export const Testimonial = (props) => {
                 height: "auto",
                 fontStyle: "normal",
                 fontSize: "16px",
+                fontFamily: 'Raleway, sans-serif',
+                fontWeight: 700
             }
         },
         mobile_review: {
