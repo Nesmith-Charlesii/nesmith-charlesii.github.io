@@ -9,6 +9,9 @@ export const About = () => {
         aboutSection: {
             height: "88vh",
             width: "100vw",
+            [theme.breakpoints.down(1020)]: {
+                height: "100vh"
+            }
         },
         aboutContainer: {
             position: "relative",
@@ -56,6 +59,7 @@ export const About = () => {
             fontFamily: 'Raleway, sans-serif',
             fontSize: "2.1vh",
             [theme.breakpoints.down(1020)]: {
+                fontSize: "16px",
                 marginTop: "-4px",
                 maxWidth: "79vw",
             }
