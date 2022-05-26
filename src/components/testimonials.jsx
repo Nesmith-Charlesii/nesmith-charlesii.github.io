@@ -189,7 +189,7 @@ export const Testimonial = (props) => {
                 fontStyle: "normal",
                 fontSize: "16px",
                 fontFamily: 'Raleway, sans-serif',
-                fontWeight: 700
+                fontWeight: 500
             }
         },
         mobile_review: {

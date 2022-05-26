@@ -62,7 +62,7 @@ export const About = () => {
                 fontSize: "16px",
                 marginTop: "-4px",
                 maxWidth: "79vw",
-                fontWeight: 700
+                fontWeight: 500
             }
         },
         image: {
