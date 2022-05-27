@@ -18,6 +18,9 @@ export const Testimonial = (props) => {
             backgroundColor: "rgb(255, 255, 255)",
             display: "flex",
             flexDirection: "column",
+            [theme.breakpoints.down(700)]: {
+                height: "515px"
+            }
         },
         testimonialsHeader: {
             paddingTop: "70px",
@@ -154,7 +157,7 @@ export const Testimonial = (props) => {
                 fontWeight: 600,
                 fontStyle: "normal",
                 marginTop: "-10px",
-                marginBottom: "25px"
+                marginBottom: "-15px"
             }
         },
         star_rating: {
@@ -169,12 +172,13 @@ export const Testimonial = (props) => {
                 }
             },
             [theme.breakpoints.down('1080')]: {
-                marginBottom: "-22px",
+                marginTop: "-26px",
+                marginBottom: "-26px",
                 transform: "scale(1.2)"
             }
         },
         review_text: {
-            fontSize: "14px",
+            fontSize: "15.5px",
             fontFamily: "arial, helvetica, sans-serif",
             fontStyle: "italic",
             height: "158px",
@@ -210,15 +214,16 @@ export const Testimonial = (props) => {
             width: "100vw",
             visibility: "hidden",
             position: "absolute",
-            top: "500px",
+            bottom: "0px",
             justifyContent: "center",
             display: "flex",
             gap: "10px",
+            paddingBottom: "50px",
             [theme.breakpoints.down(700)]: {
                 visibility: "visible",
             },
             [theme.breakpoints.down(410)]: {
-                top: "510px"
+                top: "460px"
             }
         },
         carouselIndicatorDot: {

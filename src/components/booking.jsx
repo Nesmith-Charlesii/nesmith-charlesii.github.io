@@ -41,7 +41,7 @@ export const Booking = () => {
             },
             [theme.breakpoints.down(800)]: {
                 paddingTop: "50px",
-                marginBottom: "70px"
+                marginBottom: "60px"
             },
             [theme.breakpoints.down(700)]: {
                 fontSize: "46px"
@@ -61,22 +61,25 @@ export const Booking = () => {
         },
         bookingCtaMobile: {
             height: "auto",
-            width: "180px",
+            width: "220px",
             backgroundColor: "rgb(21, 21, 21)",
             display: "flex",
             justifyContent: "center",
-            marginBottom: "50px",
+            marginBottom: "75px",
             boxSizing: "border-box",
             padding: "3px 10px",
             '& p': {
                 fontFamily: "arial, helvetica",
-                fontSize: "1.9vh",
+                fontSize: "14px",
                 fontWeight: 600,
                 marginRight: "20px"
             },
             '& a': {
                 textDecoration: "none",
                 color: "#FFFFFF"
+            },
+            [theme.breakpoints.down(480)]: {
+                width: "200px"
             }
         },
         mobileCtaContext: {

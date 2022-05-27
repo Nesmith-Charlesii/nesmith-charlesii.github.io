@@ -37,7 +37,7 @@ export const Contact = () => {
                 height: "auto",
                 display: "flex",
                 flexDirection: "column",
-                padding: "50px 0px 50px 0px"
+                padding: "30px 0px 30px 0px"
             },
         },
         divider: {
