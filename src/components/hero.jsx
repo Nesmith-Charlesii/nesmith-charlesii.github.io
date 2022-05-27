@@ -132,7 +132,7 @@ export const Hero = () => {
 
                         : 
 
-                        <a href='https://allproautocenter.setmore.com/' target="_blank" ><button className={`${classes.bookBtnMobile} ${classes.bookBtn}`} id="bookBtn">book a service</button></a>
+                        <a href='https://allproautocenter.setmore.com/' target="_blank" rel="noreferrer"><button className={`${classes.bookBtnMobile} ${classes.bookBtn}`} id="bookBtn">book a service</button></a>
                     }
                 </div>
             </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import '../index.css'
 import { NavBar } from '../components/navbar';
 import { Hero } from '../components/hero';
-import { Coupons } from '../components/coupons';
+// import { Coupons } from '../components/coupons';
 import { Services } from '../components/services';
 import { About } from '../components/about';
 import { Contact } from '../components/contact';
@@ -34,7 +34,6 @@ export const Main = () => {
         <div className={classes.mainContainer}>
             <NavBar />
             <Hero/>
-            {/* <Coupons /> */}
             <Services />
             <About />
             <Contact />

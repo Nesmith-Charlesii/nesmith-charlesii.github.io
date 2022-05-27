@@ -253,6 +253,7 @@ export const Services = () => {
     const [serviceDisplaySet, setServiceDisplaySet] = useState(0);
 
     const switchServiceSet = () => {
+        servicesTransition();
         if(serviceDisplaySet === 1) {
             setServiceDisplaySet(0)
         } else {
@@ -309,7 +310,7 @@ export const Services = () => {
                             <OilChange className={classes.serviceIcon}/>
                             <div className={classes.serviceContext}>
                                 <p className={classes.serviceTitle}>oil change</p>
-                                <p className={classes.serviceDescription}>We recommend an oil change 3,000 for regular oil or 6,000 miles for synthetic oil.</p>
+                                <p className={classes.serviceDescription}>We recommend an oil change every 3,000 miles for regular oil or 6,000 miles for synthetic oil.</p>
                             </div>
                         </div>
                         <div className={classes.serviceInfo}>
@@ -330,7 +331,7 @@ export const Services = () => {
                             <CheckEngine className={classes.serviceIcon}/>
                             <div className={classes.serviceContext}>
                                 <p className={classes.serviceTitle}>check engine light</p>
-                                <p className={classes.serviceDescription}>We take ‘check engine light’ notices seriously. Stop by and have your engine checked out by one of our mechanics.</p>
+                                <p className={classes.serviceDescription}>We take ‘check engine light’ warnings seriously. Stop by and have your engine checked out by one of our mechanics.</p>
                             </div>
                         </div>
                         <div className={classes.serviceInfo}>
@@ -388,14 +389,14 @@ export const Services = () => {
                             <Alignment className={classes.serviceIcon}/>
                             <div className={classes.serviceContext}>
                                 <p className={classes.serviceTitle}>wheel alignment</p>
-                                <p className={classes.serviceDescription}>Principles for transformative solidarity practice, developed by Solidarity Is | Building Movement.</p>
+                                <p className={classes.serviceDescription}>Adjusting your vehicle’s suspension ensures that your tires are at the correct angles, making proper contact with the road.</p>
                             </div>
                         </div>
                         <div className={classes.serviceInfo}>
                             <OilChange className={classes.serviceIcon}/>
                             <div className={classes.serviceContext}>
                                 <p className={classes.serviceTitle}>oil change</p>
-                                <p className={classes.serviceDescription}>We recommend an oil change 3,000 for regular oil or 6,000 miles for synthetic oil.</p>
+                                <p className={classes.serviceDescription}>We recommend an oil change every 3,000 miles for regular oil or 6,000 miles for synthetic oil.</p>
                             </div>
                         </div>
                         </>
@@ -425,7 +426,7 @@ export const Services = () => {
                             <CheckEngine className={classes.serviceIcon}/>
                             <div className={classes.serviceContext}>
                                 <p className={classes.serviceTitle}>check engine light</p>
-                                <p className={classes.serviceDescription}>Without a running battery in your vehicle, all you have is an expensive driveway ornament!</p>
+                                <p className={classes.serviceDescription}>We take ‘check engine light’ warnings seriously. Stop by and have your engine checked out by one of our mechanics.</p>
                             </div>
                         </div>
                         <div className={classes.serviceInfo}>
@@ -441,7 +442,7 @@ export const Services = () => {
                     </div>
                     <div className={classes.downArrow}>
                         <p>view more</p>
-                        <DownArrow onClick={() => (switchServiceSet(),servicesTransition())}/>
+                        <DownArrow onClick={() => (switchServiceSet())}/>
                     </div>
                 </div>
                 

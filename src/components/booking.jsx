@@ -108,7 +108,7 @@ export const Booking = () => {
                     :
 
                     <div className={classes.bookingCtaMobile}>
-                        <a href='https://allproautocenter.setmore.com/' target="_blank">
+                        <a href='https://allproautocenter.setmore.com/' target="_blank" rel="noreferrer">
                             <div className={classes.mobileCtaContext}>
                                 <p>GET STARTED</p>
                                 <CtaArrow />
