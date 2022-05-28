@@ -1,13 +1,12 @@
 import React from 'react';
 import '../index.css'
-import { NavBar } from '../components/navbar';
-import { Hero } from '../components/hero';
-// import { Coupons } from '../components/coupons';
-import { Services } from '../components/services';
-import { About } from '../components/about';
-import { Contact } from '../components/contact';
-import { Booking } from '../components/booking';
-import { Testimonial } from '../components/testimonials';
+import { NavBar } from '../components/NavBar/navbar';
+import { Hero } from '../components/Hero/hero';
+import { Services } from '../components/Services/services';
+import { About } from '../components/About/about';
+import { Contact } from '../components/Contact/contact';
+import { Booking } from '../components/Booking/booking';
+import { Testimonial } from '../components/Reviews/testimonials';
 import { Location } from '../components/location';
 import { createUseStyles } from 'react-jss';
 

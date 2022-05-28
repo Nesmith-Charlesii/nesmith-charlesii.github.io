@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import { createUseStyles } from 'react-jss';
-import { ReactComponent as Star } from '../assets/img/star.svg';
+import { ReactComponent as Star } from '../../assets/img/star.svg';
 import CircularProgress from '@mui/material/CircularProgress';
 import { useMediaQuery, useTheme } from '@mui/material'
-import { ReactComponent as LeftChevron } from '../assets/img/carousel_left_arrow.svg'
-import { ReactComponent as RightChevron } from '../assets/img/carousel_right_arrow.svg'
+import { ReactComponent as LeftChevron } from '../../assets/img/carousel_left_arrow.svg'
+import { ReactComponent as RightChevron } from '../../assets/img/carousel_right_arrow.svg'
 import { v4 as uuid4 } from 'uuid'
+
+import 'swiper/swiper-bundle.min.css';
+import 'swiper/swiper.min.css';
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay, Pagination } from 'swiper';
 
 export const Testimonial = (props) => {
     const theme = useTheme();
@@ -194,7 +199,8 @@ export const Testimonial = (props) => {
                 fontStyle: "normal",
                 fontSize: "16px",
                 fontFamily: 'Raleway, sans-serif',
-                fontWeight: 500
+                fontWeight: 500,
+                paddingBottom: "15px"
             }
         },
         mobile_review: {
@@ -234,7 +240,7 @@ export const Testimonial = (props) => {
         },
         indicatorFill: {
             backgroundColor: "rgb(255, 99, 0)"
-        }
+        },
     })
     
     const classes = useStyles();
@@ -294,6 +300,9 @@ export const Testimonial = (props) => {
         setReviewIndex(index);
     }
 
+    SwiperCore.use([Autoplay]);
+    SwiperCore.use([Pagination]);
+
     return(
         <div id="testimonials" className={classes.testimonialSection}>
             <div className={classes.testimonialsHeader}>
@@ -321,8 +330,39 @@ export const Testimonial = (props) => {
                 {
                     isSmallScreen &&
                     <>
+                        <div className={classes.mobile_review}>
+                            <Swiper 
+                            pagination= {{
+                                clickable: true,
+                                dynamicBullets: true
+                            }}
+                            >
+                                {
+                                    savedReviewData.map(review =>
+                                        <SwiperSlide>
+                                            <div className={classes.mobile_review}>
+                                                <div className={classes.review_section}>
+                                                    <div className={classes.author_name}>
+                                                        <p>{review.author_name}</p>
+                                                    </div>
+                                                    <div className={classes.star_rating}>
+                                                        <p>{reviewStars(review.star_rating)}</p>
+                                                    </div>
+                                                    <div className={classes.review_text}>
+                                                        <p>{review.text}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </SwiperSlide>
+                                    )
+
+                                }
+                            </Swiper>
+                        </div>
                     
-                        <RightChevron  onClick={() => nextReview()} />
+
+
+                        {/* <RightChevron  onClick={() => nextReview()} />
                         <div className={classes.mobile_review}>
                             <div className={classes.review_section}>
                                 <div className={classes.author_name}>
@@ -336,24 +376,24 @@ export const Testimonial = (props) => {
                                 </div>
                             </div>
                         </div>
-                        <LeftChevron onClick={() => previousReview()} />
+                        <LeftChevron onClick={() => previousReview()} /> */}
 
                     </>
                 }
             </div>
 
-                <div className={classes.carouselIndicators}>
-                    {
-                        Array.from(new Array(5)).map((indicator, index) =>
+            {/* <div className={classes.carouselIndicators}>
+                {
+                    Array.from(new Array(5)).map((indicator, index) =>
 
-                                reviewIndex === index ?
+                            reviewIndex === index ?
 
-                                <div className={`${classes.carouselIndicatorDot} ${classes.indicatorFill}`} key={uuid4()}></div>
-                                :
-                                <div className={`${classes.carouselIndicatorDot} `} onClick={() => (selectReview(index))} key={uuid4()}></div>
-                        )
-                    }
-                </div>
+                            <div className={`${classes.carouselIndicatorDot} ${classes.indicatorFill}`} key={uuid4()}></div>
+                            :
+                            <div className={`${classes.carouselIndicatorDot} `} onClick={() => (selectReview(index))} key={uuid4()}></div>
+                    )
+                }
+            </div> */}
 
         </div>
     )

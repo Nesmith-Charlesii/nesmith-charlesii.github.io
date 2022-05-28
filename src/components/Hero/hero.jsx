@@ -1,6 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import HeroImage from '../assets/img/heroImage2.jpeg';
+import HeroImage from '../../assets/img/heroImage2.jpeg';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { useTheme, useMediaQuery } from '@mui/material'
 

@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { createUseStyles } from 'react-jss';
-import  { ReactComponent as AutoRepair } from '../assets/img/autoRepair.svg';
-import  { ReactComponent as AcRepair } from '../assets/img/acRepair.svg';
-import  { ReactComponent as Alignment } from '../assets/img/alignment.svg';
-import  { ReactComponent as BatteryService } from '../assets/img/batteryService.svg';
-import  { ReactComponent as CheckEngine } from '../assets/img/checkEngine.svg';
-import  { ReactComponent as Electrical } from '../assets/img/electrical.svg';
-import  { ReactComponent as Maintenance } from '../assets/img/maintenance.svg';
-import  { ReactComponent as NcInspection } from '../assets/img/ncInspection.svg';
-import  { ReactComponent as OilChange } from '../assets/img/Oil_jug.svg';
-import  { ReactComponent as DownArrow } from '../assets/img/Downarrow.svg';
+import  { ReactComponent as AutoRepair } from '../../assets/img/autoRepair.svg';
+import  { ReactComponent as AcRepair } from '../../assets/img/acRepair.svg';
+import  { ReactComponent as Alignment } from '../../assets/img/alignment.svg';
+import  { ReactComponent as BatteryService } from '../../assets/img/batteryService.svg';
+import  { ReactComponent as CheckEngine } from '../../assets/img/checkEngine.svg';
+import  { ReactComponent as Electrical } from '../../assets/img/electrical.svg';
+import  { ReactComponent as Maintenance } from '../../assets/img/maintenance.svg';
+import  { ReactComponent as NcInspection } from '../../assets/img/ncInspection.svg';
+import  { ReactComponent as OilChange } from '../../assets/img/Oil_jug.svg';
+import  { ReactComponent as DownArrow } from '../../assets/img/Downarrow.svg';
 import { useMediaQuery, useTheme } from '@mui/material'
-import { Coupons } from './coupons';
+import { Coupons } from '../Coupons/coupons';
 
 export const Services = () => {
     const theme = useTheme();

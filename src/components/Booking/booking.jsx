@@ -1,8 +1,8 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { useTheme, useMediaQuery } from '@mui/material'
-import BookingCta from '../assets/img/cta_bk_2.svg'
-import {ReactComponent as CtaArrow} from '../assets/img/cta_arrow.svg'
+import BookingCta from '../../assets/img/cta_bk_2.svg'
+import {ReactComponent as CtaArrow} from '../../assets/img/cta_arrow.svg'
 
 export const Booking = () => {
     const theme = useTheme();

@@ -1,7 +1,7 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { useTheme } from '@mui/material';
-import AllProImage from '../assets/img/all_pro_image.jpg'
+import AllProImage from '../../assets/img/all_pro_image.jpg'
 
 export const About = () => {
     const theme = useTheme();
@@ -105,7 +105,7 @@ export const About = () => {
                     </div>
                 </div>
                 <div className={classes.box}>
-                    {/* <img src={AllProImage} alt="all pro auto building" className={classes.allProImage} /> */}
+                    
                 </div>
             </div>
         </div>

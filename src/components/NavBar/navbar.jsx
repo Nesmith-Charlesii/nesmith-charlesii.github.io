@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 import { useMediaQuery, useTheme, IconButton, Drawer } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import { AllProLogo } from '../assets/img/allProLogo';
+import { AllProLogo } from '../../assets/img/allProLogo';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
  
 export const NavBar = () => {
