@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { createUseStyles } from 'react-jss';
 import { ReactComponent as Star } from '../../assets/img/star.svg';
-import CircularProgress from '@mui/material/CircularProgress';
 import { useMediaQuery, useTheme } from '@mui/material'
-import { ReactComponent as LeftChevron } from '../../assets/img/carousel_left_arrow.svg'
-import { ReactComponent as RightChevron } from '../../assets/img/carousel_right_arrow.svg'
 import { v4 as uuid4 } from 'uuid'
 
 import 'swiper/swiper-bundle.min.css';
