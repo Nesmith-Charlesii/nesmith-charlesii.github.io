@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.9807815f.chunk.css",
-    "main.js": "/static/js/main.70018d9c.chunk.js",
-    "main.js.map": "/static/js/main.70018d9c.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.154188d2.js",
-    "runtime-main.js.map": "/static/js/runtime-main.154188d2.js.map",
+    "main.js": "/static/js/main.8dc9e099.chunk.js",
+    "main.js.map": "/static/js/main.8dc9e099.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.481d51de.js",
+    "runtime-main.js.map": "/static/js/runtime-main.481d51de.js.map",
     "static/css/2.ee779822.chunk.css": "/static/css/2.ee779822.chunk.css",
-    "static/js/2.1f32c692.chunk.js": "/static/js/2.1f32c692.chunk.js",
-    "static/js/2.1f32c692.chunk.js.map": "/static/js/2.1f32c692.chunk.js.map",
-    "static/js/3.0875b072.chunk.js": "/static/js/3.0875b072.chunk.js",
-    "static/js/3.0875b072.chunk.js.map": "/static/js/3.0875b072.chunk.js.map",
+    "static/js/2.834edffd.chunk.js": "/static/js/2.834edffd.chunk.js",
+    "static/js/2.834edffd.chunk.js.map": "/static/js/2.834edffd.chunk.js.map",
+    "static/js/3.a7bc7754.chunk.js": "/static/js/3.a7bc7754.chunk.js",
+    "static/js/3.a7bc7754.chunk.js.map": "/static/js/3.a7bc7754.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.ee779822.chunk.css.map": "/static/css/2.ee779822.chunk.css.map",
     "static/css/main.9807815f.chunk.css.map": "/static/css/main.9807815f.chunk.css.map",
-    "static/js/2.1f32c692.chunk.js.LICENSE.txt": "/static/js/2.1f32c692.chunk.js.LICENSE.txt",
+    "static/js/2.834edffd.chunk.js.LICENSE.txt": "/static/js/2.834edffd.chunk.js.LICENSE.txt",
     "static/media/Downarrow.59ee83e2.svg": "/static/media/Downarrow.59ee83e2.svg",
     "static/media/Oil_jug.e47b26c0.svg": "/static/media/Oil_jug.e47b26c0.svg",
     "static/media/acRepair.5116adf3.svg": "/static/media/acRepair.5116adf3.svg",
@@ -21,8 +21,6 @@
     "static/media/all_pro_image.627dcc4c.jpg": "/static/media/all_pro_image.627dcc4c.jpg",
     "static/media/autoRepair.ef3c081e.svg": "/static/media/autoRepair.ef3c081e.svg",
     "static/media/batteryService.82f5465b.svg": "/static/media/batteryService.82f5465b.svg",
-    "static/media/carousel_left_arrow.da4c7302.svg": "/static/media/carousel_left_arrow.da4c7302.svg",
-    "static/media/carousel_right_arrow.dde897df.svg": "/static/media/carousel_right_arrow.dde897df.svg",
     "static/media/checkEngine.c6fd7bed.svg": "/static/media/checkEngine.c6fd7bed.svg",
     "static/media/coupon2.f6f0aaf3.svg": "/static/media/coupon2.f6f0aaf3.svg",
     "static/media/cta_arrow.8fc7f02e.svg": "/static/media/cta_arrow.8fc7f02e.svg",
@@ -35,10 +33,10 @@
     "static/media/star.d1067c53.svg": "/static/media/star.d1067c53.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.154188d2.js",
+    "static/js/runtime-main.481d51de.js",
     "static/css/2.ee779822.chunk.css",
-    "static/js/2.1f32c692.chunk.js",
+    "static/js/2.834edffd.chunk.js",
     "static/css/main.9807815f.chunk.css",
-    "static/js/main.70018d9c.chunk.js"
+    "static/js/main.8dc9e099.chunk.js"
   ]
 }
