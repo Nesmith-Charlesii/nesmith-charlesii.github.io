@@ -141,10 +141,11 @@ export const NavBar = () => {
         fontWeight: "bold",
         paddingTop: "15px",
         paddingBottom: "15px",
-        transition: "padding-bottom 200ms",
+        transition: "color 300ms",
         '&:hover': {
           cursor: "pointer",
-          textShadow: " 12px 10px 1px rgb(30, 30, 30)",
+          textDecoration: "line-through",
+          color: "rgb(255, 99, 0)"
         }
       }
     },
