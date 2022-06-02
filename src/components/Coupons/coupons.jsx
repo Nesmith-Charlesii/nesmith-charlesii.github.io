@@ -1,6 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import {ReactComponent as CouponOne} from '../../assets/img/oil_coupon_update.svg'
+import {ReactComponent as CouponOne} from '../../assets/img/PennzoilCoupon.svg'
 import {ReactComponent as CouponTwo} from '../../assets/img/coupon2.svg'
 import { useTheme } from '@mui/material';
 
