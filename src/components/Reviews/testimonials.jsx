@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import { createUseStyles } from 'react-jss';
 import { ReactComponent as Star } from '../../assets/img/star.svg';
 import { useMediaQuery, useTheme } from '@mui/material'
@@ -241,7 +241,7 @@ export const Testimonial = (props) => {
     })
     
     const classes = useStyles();
-    const [reviewIndex, setReviewIndex] = useState(0);
+    // const [reviewIndex, setReviewIndex] = useState(0);
 
     const savedReviewData = [
         {
@@ -277,25 +277,25 @@ export const Testimonial = (props) => {
         ))
     }
 
-    const previousReview = () => {
-        if(reviewIndex === 0) {
-            setReviewIndex(savedReviewData.length - 1)
-        } else {
-        setReviewIndex(reviewIndex - 1);
-        }
-    }
+    // const previousReview = () => {
+    //     if(reviewIndex === 0) {
+    //         setReviewIndex(savedReviewData.length - 1)
+    //     } else {
+    //     setReviewIndex(reviewIndex - 1);
+    //     }
+    // }
 
-    const nextReview = () => {
-        if(reviewIndex === (savedReviewData.length - 1)) {
-            setReviewIndex(0)
-        } else {
-            setReviewIndex(reviewIndex + 1)
-        }
-    }
+    // const nextReview = () => {
+    //     if(reviewIndex === (savedReviewData.length - 1)) {
+    //         setReviewIndex(0)
+    //     } else {
+    //         setReviewIndex(reviewIndex + 1)
+    //     }
+    // }
 
-    const selectReview = (index) => {
-        setReviewIndex(index);
-    }
+    // const selectReview = (index) => {
+    //     setReviewIndex(index);
+    // }
 
     SwiperCore.use([Autoplay]);
     SwiperCore.use([Pagination]);
