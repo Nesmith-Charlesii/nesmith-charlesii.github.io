@@ -1,7 +1,7 @@
 // import React, { useState } from 'react';
 import { createUseStyles } from 'react-jss';
 import { ReactComponent as Star } from '../../assets/img/star.svg';
-import { useMediaQuery, useTheme } from '@mui/material'
+import { useMediaQuery, useTheme } from '@mui/material';
 import { v4 as uuid4 } from 'uuid'
 
 import 'swiper/swiper-bundle.min.css';
