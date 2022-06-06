@@ -315,7 +315,7 @@ export const NavBar = () => {
         {
           !isSmallScreen ?
             <ul className={`${classes.navLinkGroup} ${isIntersecting === null ? null : isIntersecting === true ? classes.navGroupSlider : isIntersecting === false && count >= 1 ? classes.navGroupReturn : null} `} id="navLinkGroup">
-              <li className={classes.navLink}><AnchorLink offset="143" href="#services" >services</AnchorLink></li>
+              <li className={classes.navLink}><AnchorLink offset="170" href="#services" >services</AnchorLink></li>
               <li className={classes.navLink}><AnchorLink offset="100" href="#about">about</AnchorLink></li>
               <li className={classes.navLink}><AnchorLink offset="100" href="#contact">contact</AnchorLink></li>
               <li id="bookSlider" className={`${classes.navLinkBookBtn} ${isIntersecting === true ? `${classes.bookBtnSlider}` : classes.bookBtnReturn}`}><AnchorLink offset="100" href="#booking">book a service</AnchorLink></li>

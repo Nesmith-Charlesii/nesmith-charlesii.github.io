@@ -19,7 +19,7 @@ export const Contact = () => {
             '& p': {
                 marginBottom: 0,
                 marginTop: "0px",
-                textAlign: "center",
+                textAlign: "left",
                 '& a': {
                     textDecoration: "none",
                     color: "rgb(210,210,210)",
@@ -62,6 +62,7 @@ export const Contact = () => {
             <p className={classes.divider}></p>
             <div className={classes.hours}>
                 <p>mon - fri: 8am - 5pm</p>
+                <p>saturday: 8am - 4pm</p>
             </div>
         </div>
     )

@@ -57,7 +57,7 @@ export const Main = () => {
     })
 
     const classes = useStyles();
-    const [maintenance, setMainenance] = useState(true)
+    const [maintenance, setMainenance] = useState(false)
 
     return (
         <>

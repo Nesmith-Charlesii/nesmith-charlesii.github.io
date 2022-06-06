@@ -151,7 +151,7 @@ export const Testimonial = (props) => {
             fontFamily: "arial, helvetica, sans-serif",
             height: "50px",
             fontWeight: 600,
-            fontStyle: "italic",
+            // fontStyle: "italic",
             marginBottom: "10px",
             [theme.breakpoints.down('1080')]: {
                 textAlign: "center",
@@ -182,7 +182,7 @@ export const Testimonial = (props) => {
         review_text: {
             fontSize: "15.5px",
             fontFamily: "arial, helvetica, sans-serif",
-            fontStyle: "italic",
+            // fontStyle: "italic",
             height: "158px",
             maxWidth: "320px",
             padding: "0px 20px 0px 20px",
@@ -276,26 +276,6 @@ export const Testimonial = (props) => {
             <Star id="star" key={uuid4()}/>
         ))
     }
-
-    // const previousReview = () => {
-    //     if(reviewIndex === 0) {
-    //         setReviewIndex(savedReviewData.length - 1)
-    //     } else {
-    //     setReviewIndex(reviewIndex - 1);
-    //     }
-    // }
-
-    // const nextReview = () => {
-    //     if(reviewIndex === (savedReviewData.length - 1)) {
-    //         setReviewIndex(0)
-    //     } else {
-    //         setReviewIndex(reviewIndex + 1)
-    //     }
-    // }
-
-    // const selectReview = (index) => {
-    //     setReviewIndex(index);
-    // }
 
     SwiperCore.use([Autoplay]);
     SwiperCore.use([Pagination]);
