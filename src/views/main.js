@@ -10,8 +10,10 @@ import { Testimonial } from '../components/Reviews/testimonials';
 import { Location } from '../components/location';
 import { createUseStyles } from 'react-jss';
 import BookingCta from '../assets/img/cta_bk_2.svg'
+import { useTheme } from '@mui/material';
 
 export const Main = () => {
+    const theme = useTheme();
     const useStyles = createUseStyles({
         footer: {
             backgroundColor: "rgb(21,21,21);",
@@ -36,9 +38,20 @@ export const Main = () => {
             backgroundRepeat: "no-repeat",
             backgroundColor: "rgb(255, 99, 0)",
             '& p': {
-                fontSize: "10vw",
-                fontFamily: "arial, fantasy",
-                fontWeight: 700
+                fontSize: "100px",
+                fontFamily: "arial, helvetica",
+                fontWeight: 700,
+                textAlign: "center",
+                padding: "0px 40px",
+                [theme.breakpoints.down(600)]: {
+                    transform: "scale(.8)"
+                },
+                [theme.breakpoints.down(460)]: {
+                    transform: "scale(.6)"
+                },
+                [theme.breakpoints.down(330)]: {
+                    transform: "scale(.4)"
+                },
             }
         }
     })
