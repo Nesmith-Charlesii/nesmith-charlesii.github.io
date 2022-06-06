@@ -36,7 +36,7 @@ export const Main = () => {
             backgroundRepeat: "no-repeat",
             backgroundColor: "rgb(255, 99, 0)",
             '& p': {
-                fontSize: "10vh",
+                fontSize: "10vw",
                 fontFamily: "arial, fantasy",
                 fontWeight: 700
             }
