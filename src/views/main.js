@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../index.css'
+import '../index.css';
 import { NavBar } from '../components/NavBar/navbar';
 import { Hero } from '../components/Hero/hero';
 import { Services } from '../components/Services/services';
@@ -57,7 +57,7 @@ export const Main = () => {
     })
 
     const classes = useStyles();
-    const [maintenance, setMainenance] = useState(false)
+    const [maintenance, setMainenance] = useState(true)
 
     return (
         <>
